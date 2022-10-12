@@ -1,6 +1,7 @@
-import boto3
-import json
 import argparse
+import json
+
+import boto3
 
 
 def args():
@@ -46,7 +47,7 @@ def show_resource(resources, search):
                     and x["type"] == search_keywords[1]
                     and x["name"] == search_keywords[2],
                     resources,
-                )
+                ),
             )
         elif "module" in search_keywords[0]:
             module = search_keywords[0] + "." + search_keywords[1]
@@ -56,7 +57,7 @@ def show_resource(resources, search):
                     and x["type"] == search_keywords[2]
                     and x["name"] == search_keywords[3],
                     resources,
-                )
+                ),
             )
         print(resource)
 

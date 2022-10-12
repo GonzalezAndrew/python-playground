@@ -1,9 +1,10 @@
+import csv
 import json
-from datetime import datetime
 import profile
+from datetime import datetime
+
 import boto3
 import botocore
-import csv
 
 
 def get_enabled_regions(boto3_session: boto3.Session, service: str):
@@ -34,7 +35,7 @@ def datetime_converter(json_dict):
 def get_default_vpc(client):
     try:
         response = client.describe_vpcs(
-            Filters=[{"Name": "is-default", "Values": ["true"]}]
+            Filters=[{"Name": "is-default", "Values": ["true"]}],
         )
         return response["Vpcs"][0]["VpcId"]
     except Exception as err:
@@ -71,7 +72,7 @@ for profile in profiles:
         defaultVpcId = get_default_vpc(client=client)
         if len(defaultVpcId) != 0:
             response = client.describe_network_acls(
-                Filters=[{"Name": "vpc-id", "Values": [defaultVpcId]}]
+                Filters=[{"Name": "vpc-id", "Values": [defaultVpcId]}],
             )
 
             # #print(json.dumps(response, default=datetime_converter, indent=4))

@@ -1,10 +1,11 @@
-import boto3
 import json
+
+import boto3
 
 ec2 = boto3.client("ec2", region_name="us-east-1")
 
 response = ec2.describe_security_groups(
-    Filters=[{"Name": "ip-permission.cidr", "Values": ["0.0.0.0/0"]}]
+    Filters=[{"Name": "ip-permission.cidr", "Values": ["0.0.0.0/0"]}],
 )
 
 sgs = []

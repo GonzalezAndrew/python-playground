@@ -1,16 +1,20 @@
-import boto3
 import json
-import botocore
 from datetime import datetime
+
+import boto3
+import botocore
+
 
 def datetime_converter(json_dict):
     """convert datetime in json dict to string."""
     if isinstance(json_dict, datetime):
         return json_dict.__str__()
 
+
 def get_all_profiles():
     """Return a list of profiles from your aws configuration."""
     return boto3.session.Session().available_profiles
+
 
 def get_enabled_regions(boto3_session: boto3.Session, service: str):
     regions = boto3_session.get_available_regions(service)
@@ -29,7 +33,7 @@ def get_enabled_regions(boto3_session: boto3.Session, service: str):
                 raise
     return enabled_regions
 
+
 for profile in get_all_profiles():
     session = boto3.Session(profile_name=profile)
     regions = get_enabled_regions(session, "ec2")
-    

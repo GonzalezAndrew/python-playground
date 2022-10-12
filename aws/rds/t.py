@@ -1,9 +1,10 @@
-import os
-import boto3
 import json
+import os
 from datetime import datetime
-from datetime import timezone
 from datetime import timedelta
+from datetime import timezone
+
+import boto3
 
 today = datetime.now(timezone.utc)
 TARGET_CLUSTER_NAME = os.environ.get("TARGET_CLUSTER_NAME", "stg-us-2")
@@ -111,16 +112,16 @@ def delete_snapshot(session, snapshot_id, region):
     client = session.client("rds", region)
     try:
         response = client.delete_db_cluster_snapshot(
-            DBClusterSnapshotIdentifier=snapshot_id
+            DBClusterSnapshotIdentifier=snapshot_id,
         )
         if response["ResponseMetadata"]["HTTPStatusCode"] != 200:
             raise Exception(
-                f"Was unsuccessful when trying to delete the snapshot_id: {snapshot_id}"
+                f"Was unsuccessful when trying to delete the snapshot_id: {snapshot_id}",
             )
         return response
     except client.exceptions.InvalidDBClusterSnapshotStateFault as err:
         print(
-            f"Invalid database cluster snapshot state. Ensure the snapshot is in the available state. {err}"
+            f"Invalid database cluster snapshot state. Ensure the snapshot is in the available state. {err}",
         )
     except client.exceptions.DBClusterSnapshotNotFoundFault as err:
         print(f"Database cluster snapshot was not found. {err}")
@@ -187,7 +188,8 @@ def get_most_recent_snapshot(session, region):
     try:
         all_snapshots = get_all_snapshots(session=session, region=region)
         all_snapshots.sort(
-            key=lambda all_snapshots: all_snapshots["SnapshotCreateTime"], reverse=True
+            key=lambda all_snapshots: all_snapshots["SnapshotCreateTime"],
+            reverse=True,
         )
         return all_snapshots[0]
     except Exception as err:
@@ -204,7 +206,8 @@ def clean_old_snapshots(session, region):
     snapshot_ids = []
     all_snapshots = get_all_snapshots(session=session, region=region)
     all_snapshots.sort(
-        key=lambda all_snapshots: all_snapshots["SnapshotCreateTime"], reverse=True
+        key=lambda all_snapshots: all_snapshots["SnapshotCreateTime"],
+        reverse=True,
     )
 
     for snapshots in all_snapshots:
@@ -221,7 +224,7 @@ def clean_old_snapshots(session, region):
         # check to see if the snapshot has expired yet.
         if check_snapshot_expired(creation_date, days_to_expire=days_to_expire):
             print(
-                f"Snapshot {snapshot_id}, with time {creation_date} has expired. Deleting the snapshot."
+                f"Snapshot {snapshot_id}, with time {creation_date} has expired. Deleting the snapshot.",
             )
             snapshot_ids.append(snapshot_id)
             delete_snapshot(session, snapshot_id, region)
@@ -234,7 +237,8 @@ def lambda_handler(event, context):
 
     # get the most recent snapshot from the source region
     most_recent_snapshot = get_most_recent_snapshot(
-        session=session, region=SOURCE_REGION
+        session=session,
+        region=SOURCE_REGION,
     )
 
     # copy the most recent snapshot from the source region to the target region

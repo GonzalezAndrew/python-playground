@@ -1,7 +1,8 @@
-import boto3
 import csv
 import json
 from datetime import datetime
+
+import boto3
 
 accounts = {
     "671758882420": "liveoak-sandbox",

@@ -1,6 +1,7 @@
-import boto3
-from datetime import datetime
 import json
+from datetime import datetime
+
+import boto3
 
 
 def datetime_converter(json_dict):
@@ -12,7 +13,8 @@ def datetime_converter(json_dict):
 def get_resources():
     restag = boto3.client("resourcegroupstaggingapi")
     response = restag.get_resources(
-        ResourcesPerPage=50, ResourceTypeFilters=["s3:bucket"]
+        ResourcesPerPage=50,
+        ResourceTypeFilters=["s3:bucket"],
     )
     print(json.dumps(response, default=datetime_converter, indent=4))
 

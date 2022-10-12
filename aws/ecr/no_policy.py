@@ -1,10 +1,10 @@
 import boto3
-
 from rich.console import Console
 from rich.table import Table
 
 regions = ["us-east-1", "us-east-2", "eu-west-1", "us-west-2"]
 test_regions = ["us-east-1", "us-east-2"]
+
 
 def output_table(title: str, data: list) -> int:
     """output data into table."""
@@ -19,6 +19,7 @@ def output_table(title: str, data: list) -> int:
 
     console.print(table)
     console.print()
+
 
 def get_all_profiles():
     """Return a list of profiles from your aws configuration."""
@@ -37,20 +38,23 @@ def get_all_repos(client):
             .paginate()
             .build_full_result()["repositories"]
         )
-        all_repos = [repos["repositoryName"] for repos in all_repos if "repositoryName" in repos]
+        all_repos = [
+            repos["repositoryName"] for repos in all_repos if "repositoryName" in repos
+        ]
         return all_repos
     except Exception as err:
         raise err
 
+
 def get_ecr_lifecycle_policy(repository_name: str, client):
-    """
-    """
+    """ """
     try:
         response = client.get_lifecycle_policy(repositoryName=repository_name)
-        if response['ResponseMetadata']['HTTPStatusCode'] == 200:
+        if response["ResponseMetadata"]["HTTPStatusCode"] == 200:
             return True
     except client.exceptions.LifecyclePolicyNotFoundException:
         return False
+
 
 def main():
     profiles = get_all_profiles()
@@ -63,14 +67,22 @@ def main():
             if len(all_repos) != 0:
                 data = []
                 for repo_name in all_repos:
-                    if get_ecr_lifecycle_policy(repository_name=repo_name, client=client):
-                        data.append({'repo_name': repo_name, 'lifecycle_policy': "True"})
+                    if get_ecr_lifecycle_policy(
+                        repository_name=repo_name,
+                        client=client,
+                    ):
+                        data.append(
+                            {"repo_name": repo_name, "lifecycle_policy": "True"},
+                        )
                     else:
-                        data.append({'repo_name': repo_name, 'lifecycle_policy': "False"})
-                
-                _data = sorted(data, key=lambda x:x["lifecycle_policy"], reverse=True)
+                        data.append(
+                            {"repo_name": repo_name, "lifecycle_policy": "False"},
+                        )
+
+                _data = sorted(data, key=lambda x: x["lifecycle_policy"], reverse=True)
 
                 output_table(title=f"{profile}: {region}", data=_data)
+
 
 if __name__ == "__main__":
     raise SystemExit(main())

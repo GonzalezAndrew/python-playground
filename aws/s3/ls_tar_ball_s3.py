@@ -5,10 +5,11 @@ with aws-okta or other various authentication methods that set your AWS credenti
 Example: $ python3 ls_tar_ball_s3.py cdp-ghe-backup-tools-staging-us 20200617T202937.tar.gz
 """
 #!/usr/bin/python
-import boto3
 import io
-import tarfile
 import sys
+import tarfile
+
+import boto3
 
 if __name__ == "__main__":
     if sys.argv[1] is not None:

@@ -1,8 +1,9 @@
 import os
 import subprocess
+
+from gitignore_parser import parse_gitignore
 from pre_commit_hooks.end_of_file_fixer import main as end_of_file_main
 from pre_commit_hooks.trailing_whitespace_fixer import main as trail_main
-from gitignore_parser import parse_gitignore
 
 # get currend directory of where the script is called
 cwd = os.getcwd()

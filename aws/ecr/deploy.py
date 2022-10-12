@@ -1,5 +1,6 @@
-from kubernetes import client, config
 import avionix
+from kubernetes import client
+from kubernetes import config
 
 resource_class = {
     "liveoak-sandbox": "liveoaktechnologies/test",

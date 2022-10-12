@@ -4,8 +4,10 @@ Script which retrieves EC2 Metadata for an AWS EC2 instance
 - for local development (not in AWS) use: https://github.com/aws/amazon-ec2-metadata-mock
 
 """
+from typing import Any
+from typing import Dict
 from typing import Optional
-from typing import Dict, Any
+
 import requests
 
 

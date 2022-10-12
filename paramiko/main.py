@@ -1,12 +1,15 @@
-import paramiko
-import time
-import os
-import contextlib
-from typing import Generator, Optional, Sequence
-import traceback
 import argparse
-import sys
+import contextlib
 import datetime
+import os
+import sys
+import time
+import traceback
+from typing import Generator
+from typing import Optional
+from typing import Sequence
+
+import paramiko
 
 
 @contextlib.contextmanager
@@ -90,7 +93,7 @@ def get_remote_files(
     sftp = ssh_client.open_sftp()
     try:
         print(
-            f"Grabbing the remote file {remote_file_path}, and placing it {local_file_path}"
+            f"Grabbing the remote file {remote_file_path}, and placing it {local_file_path}",
         )
         sftp.get(remote_file_path, local_file_path)
     except Exception as e:
@@ -106,7 +109,8 @@ def get_remote_files(
 
 def all_logs(ssh_client: paramiko.SSHClient):
     all_logs = run_remote_command(
-        ssh_client=ssh_client, command="ls /tmp/ghe_test/logs/"
+        ssh_client=ssh_client,
+        command="ls /tmp/ghe_test/logs/",
     )
 
     for log in all_logs:
@@ -123,14 +127,17 @@ def all_logs(ssh_client: paramiko.SSHClient):
 
 def all_reports(ssh_client: paramiko.SSHClient):
     reports_with_failures = run_remote_command(
-        ssh_client=ssh_client, command="grep -rl 128 /tmp/ghe_test/clone/reports/*"
+        ssh_client=ssh_client,
+        command="grep -rl 128 /tmp/ghe_test/clone/reports/*",
     )
     for report in reports_with_failures:
         local_path = "".join(
-            [os.getcwd(), "/files/reports/reports-", report.split("/report-")[1]]
+            [os.getcwd(), "/files/reports/reports-", report.split("/report-")[1]],
         )
         status = get_remote_files(
-            ssh_client=ssh_client, remote_file_path=report, local_file_path=local_path
+            ssh_client=ssh_client,
+            remote_file_path=report,
+            local_file_path=local_path,
         )
         if status != 0:
             print(f"Exiting with status {status}...")
@@ -147,7 +154,9 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
     )
 
     parser.add_argument(
-        "--verbose", action="store_true", help="Add SSH Client logging."
+        "--verbose",
+        action="store_true",
+        help="Add SSH Client logging.",
     )
 
     parser.add_argument(
@@ -177,13 +186,19 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
     # add cmd command
     cmd_parser = subparser.add_parser("command", help="Run a custom command")
     cmd_parser.add_argument(
-        "--cmd", type=str, help="The custom command to run against the AWS EC2 node."
+        "--cmd",
+        type=str,
+        help="The custom command to run against the AWS EC2 node.",
     )
     cmd_parser.add_argument(
-        "--all-logs", action="store_true", help="Get all application logs."
+        "--all-logs",
+        action="store_true",
+        help="Get all application logs.",
     )
     cmd_parser.add_argument(
-        "--all-reports", action="store_true", help="Get all reports."
+        "--all-reports",
+        action="store_true",
+        help="Get all reports.",
     )
 
     # add help command

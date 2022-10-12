@@ -1,16 +1,15 @@
 import argparse
 import contextlib
-from datetime import datetime
 import json
 import logging
 import os
 import sys
+from datetime import datetime
 from typing import Optional
 from typing import Sequence
 from typing import Tuple
 
 import boto3
-
 from python_on_whales import docker
 from python_on_whales import Image
 from python_on_whales.exceptions import DockerException
@@ -59,7 +58,10 @@ def docker_build(tag: str, build_args: dict) -> Image:
     try:
         logger.info(f"Building the local Dockerfile with the tag {tag}.")
         docker_image = docker.build(
-            context_path=".", build_args=build_args, tags=[tag], cache=True
+            context_path=".",
+            build_args=build_args,
+            tags=[tag],
+            cache=True,
         )
         return docker_image
     except DockerException as err:
@@ -99,8 +101,9 @@ def docker_tag(docker_image: Image, registry: str) -> Image:
 
         logger.info(
             "Tagging the image {} -> {}".format(
-                docker_image.repo_tags[0], f"{registry}/{docker_image.repo_tags[0]}"
-            )
+                docker_image.repo_tags[0],
+                f"{registry}/{docker_image.repo_tags[0]}",
+            ),
         )
 
         docker.image.tag(source_image=docker_image, new_tag=new_tag)
@@ -131,7 +134,7 @@ def docker_push(docker_image: Image, registry: str) -> None:
                     docker_image.repo_tags.remove(tag)
 
         logger.info(
-            "Pushing the docker image, {}, to AWS ECR.".format(docker_image.repo_tags)
+            "Pushing the docker image, {}, to AWS ECR.".format(docker_image.repo_tags),
         )
         docker.image.push(docker_image.repo_tags)
     except DockerException as err:
@@ -151,8 +154,8 @@ def docker_remove(docker_image: Image) -> None:
     try:
         logger.info(
             "Removing the image {} from your local machine".format(
-                docker_image.repo_tags
-            )
+                docker_image.repo_tags,
+            ),
         )
         docker.image.remove(docker_image, force=True, prune=True)
     except DockerException as err:
@@ -170,7 +173,9 @@ def datetime_converter(json_dict):
 
 
 def get_most_recent_image(
-    session: boto3.session.Session, region: str, repository_name: str
+    session: boto3.session.Session,
+    region: str,
+    repository_name: str,
 ) -> dict:
     """Return the most recently pushed image.
     :param session: The AWS boto3 session object.
@@ -183,7 +188,8 @@ def get_most_recent_image(
         all_images = (
             client.get_paginator("describe_images")
             .paginate(
-                repositoryName=repository_name, PaginationConfig={"PageSize": 1000}
+                repositoryName=repository_name,
+                PaginationConfig={"PageSize": 1000},
             )
             .build_full_result()["imageDetails"]
         )
@@ -191,14 +197,14 @@ def get_most_recent_image(
 
         logger.info(
             "The most recent image: {}".format(
-                json.dumps(all_images[0], default=datetime_converter, indent=4)
-            )
+                json.dumps(all_images[0], default=datetime_converter, indent=4),
+            ),
         )
 
         return all_images[0]
     except Exception as err:
         logger.error(
-            "There was an error calling `get_most_recent_images`: \n{}".format(err)
+            "There was an error calling `get_most_recent_images`: \n{}".format(err),
         )
         raise err
 
@@ -216,15 +222,15 @@ def update_image_tag(image: dict) -> str:
             if len(image["imageTags"]) > 0:
                 logger.info(
                     "The image had many tags, selecting the tag with the greatest number. Tag list: {}".format(
-                        image["imageTags"]
-                    )
+                        image["imageTags"],
+                    ),
                 )
                 latest_image_version = max(image["imageTags"])
             else:
                 latest_image_version = image["imageTags"][0]
 
             logger.info(
-                "Old image tag {}".format(f"{repository_name}:{latest_image_version}")
+                "Old image tag {}".format(f"{repository_name}:{latest_image_version}"),
             )
             # split the str into a list. The tag must look like 0.0.0
             version_split = latest_image_version.split(".")
@@ -232,8 +238,8 @@ def update_image_tag(image: dict) -> str:
             updated_version = ".".join(version_split)
             logger.info(
                 "The updated image tag {}".format(
-                    f"{repository_name}:{updated_version}"
-                )
+                    f"{repository_name}:{updated_version}",
+                ),
             )
             return f"{repository_name}:{updated_version}"
     except Exception as err:
@@ -254,7 +260,7 @@ def get_registry_url(image: dict, region: str) -> Tuple[str, str]:
             "Registry URL {}, Registry {}".format(
                 f"https://{registryId}.dkr.ecr.{region}.amazonaws.com",
                 f"{registryId}.dkr.ecr.{region}.amazonaws.com",
-            )
+            ),
         )
         return (
             f"https://{registryId}.dkr.ecr.{region}.amazonaws.com",
@@ -262,7 +268,7 @@ def get_registry_url(image: dict, region: str) -> Tuple[str, str]:
         )
     else:
         logger.error(
-            "There was an error calling `get_registry_url`.\nThe image dictonary did not contain the `registryId` key."
+            "There was an error calling `get_registry_url`.\nThe image dictonary did not contain the `registryId` key.",
         )
         raise Exception("The image dictonary did not contain the `registryId` key.")
 
@@ -290,7 +296,9 @@ def run(args: argparse.Namespace) -> int:
 
     # get the most recent ecr image
     image = get_most_recent_image(
-        session=session, region=region, repository_name=args.repository_name
+        session=session,
+        region=region,
+        repository_name=args.repository_name,
     )
 
     # generate the update image tag
@@ -305,8 +313,8 @@ def run(args: argparse.Namespace) -> int:
         tagged_docker_image = docker_tag(docker_image=docker_image, registry=registry)
         logger.debug(
             "The tagged image manifest {}".format(
-                json.dumps(tagged_docker_image, default=datetime_converter, indent=4)
-            )
+                json.dumps(tagged_docker_image, default=datetime_converter, indent=4),
+            ),
         )
 
         docker_push(docker_image=tagged_docker_image, registry=registry)

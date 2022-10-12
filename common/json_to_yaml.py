@@ -1,5 +1,6 @@
-import yaml
 import json
+
+import yaml
 
 json_str = """
 {
@@ -45,9 +46,9 @@ json_dict = {
                     "GroupName": "EC2ContainerService-default-EcsSecurityGroup-80SC5Y9CS7MQ",
                     "GroupId": "sg-06983ed793f7f8b7e",
                 },
-            ]
-        }
-    }
+            ],
+        },
+    },
 }
 
 json_payload = json.loads(json_str)

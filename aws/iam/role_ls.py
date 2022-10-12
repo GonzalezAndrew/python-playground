@@ -1,9 +1,10 @@
 import json
-from urllib import response
-import boto3
 from datetime import datetime
-from datetime import timezone
 from datetime import timedelta
+from datetime import timezone
+from urllib import response
+
+import boto3
 
 today = datetime.now(timezone.utc)
 INACTIVITY_DAYS = 90
@@ -48,7 +49,7 @@ for role_name in all_role_names:
             lastUsedDate = response["Role"]["RoleLastUsed"]["LastUsedDate"]
             if check_date(date_to_check=lastUsedDate, days_to_expire=INACTIVITY_DAYS):
                 print(
-                    f"The role {role_name}, with lastUsedDate {lastUsedDate} has expired."
+                    f"The role {role_name}, with lastUsedDate {lastUsedDate} has expired.",
                 )
             # else:
             #     print(f"The role {role_name}, with lastUsedDate {lastUsedDate} has not expired.")

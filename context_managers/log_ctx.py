@@ -1,8 +1,8 @@
+import contextlib
+import logging
 import sys
 from typing import IO
 from typing import Optional
-import contextlib
-import logging
 
 logging.basicConfig(
     level=logging.INFO,
@@ -14,12 +14,14 @@ logging.basicConfig(
 logger = logging.getLogger("test")
 """
 the exitstack() context manager allows you to add things to the context manager
-and will get torn down eventually 
+and will get torn down eventually
 """
 
 
 def output_line(
-    s: str, stream: IO[str] = sys.stdout, filename: Optional[str] = None
+    s: str,
+    stream: IO[str] = sys.stdout,
+    filename: Optional[str] = None,
 ) -> None:
     with contextlib.ExitStack() as exit_stack:
         streams = [stream]

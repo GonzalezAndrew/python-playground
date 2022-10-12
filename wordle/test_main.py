@@ -1,5 +1,7 @@
-from main import color_word, GREEN_PAIR, YELLOW_PAIR
 import pytest
+from main import color_word
+from main import GREEN_PAIR
+from main import YELLOW_PAIR
 
 
 @pytest.mark.parametrize(

@@ -6,6 +6,7 @@
 - repeats aren't additionally yellow
 """
 from __future__ import annotations
+
 import curses
 import random
 
@@ -98,7 +99,10 @@ def c_main(stdscr: curses._CursesWindow) -> int:
         if len(current_word) == 5:
             if current_word in wordlist:
                 stdscr.addstr(
-                    line, 12, "press enter to accept", curses.color_pair(CYAN_PAIR)
+                    line,
+                    12,
+                    "press enter to accept",
+                    curses.color_pair(CYAN_PAIR),
                 )
                 ch = stdscr.get_wch()
                 if ch == "\n":
@@ -109,7 +113,10 @@ def c_main(stdscr: curses._CursesWindow) -> int:
                     unget.append(ch)
             else:
                 stdscr.addstr(
-                    line, 12, "(word is not in word list!)", curses.color_pair(RED_PAIR)
+                    line,
+                    12,
+                    "(word is not in word list!)",
+                    curses.color_pair(RED_PAIR),
                 )
 
         stdscr.move(line, 1 + len(current_word) * 2)

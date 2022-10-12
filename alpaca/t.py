@@ -1,6 +1,6 @@
-from alpaca_trade_api.rest import REST
 import json
 
+from alpaca_trade_api.rest import REST
 from rich.console import Console
 from rich.table import Table
 

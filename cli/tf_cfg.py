@@ -1,7 +1,8 @@
-import os
 import argparse
-from typing import Optional, Sequence
+import os
 import sys
+from typing import Optional
+from typing import Sequence
 
 """
 Configure all the CDP Terraform projects inputs.tfvars under the /projects/ directory of a terraform project

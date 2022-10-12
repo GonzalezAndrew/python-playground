@@ -1,9 +1,9 @@
-import boto3
 import json
-from datetime import datetime
 import os
-import yaml
+from datetime import datetime
 
+import boto3
+import yaml
 from pytablewriter import MarkdownTableWriter
 
 
@@ -98,7 +98,7 @@ def check_sg_association(client, sg):
     response = client.describe_network_interfaces(
         Filters=[
             {"Name": "group-id", "Values": [sg_id]},
-        ]
+        ],
     )
 
     if len(response["NetworkInterfaces"]) != 0:
@@ -116,7 +116,7 @@ def check_sg_association(client, sg):
                     "VpcId": association.get("VpcId", ""),
                 }
                 print(
-                    f"The security group {sg_name} contains the following network associations."
+                    f"The security group {sg_name} contains the following network associations.",
                 )
             except Exception as err:
                 raise err

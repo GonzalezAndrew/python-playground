@@ -1,4 +1,5 @@
 import json
+
 from pytablewriter import MarkdownTableWriter
 
 test = {
@@ -180,7 +181,7 @@ test = {
                     "GroupId": "sg-034c3efd3b3035aee",
                     "GroupName": "consul server",
                 },
-            ]
+            ],
         },
         {
             "us-east-2": [
@@ -199,7 +200,7 @@ test = {
                     "GroupId": "sg-2a3c174f",
                     "GroupName": "default",
                 },
-            ]
+            ],
         },
         {
             "eu-west-1": [
@@ -207,8 +208,8 @@ test = {
                     "Description": "default VPC security group",
                     "GroupId": "sg-8adcf2c2",
                     "GroupName": "default",
-                }
-            ]
+                },
+            ],
         },
         {
             "us-west-2": [
@@ -216,10 +217,10 @@ test = {
                     "Description": "default VPC security group",
                     "GroupId": "sg-0c3ae44b",
                     "GroupName": "default",
-                }
-            ]
+                },
+            ],
         },
-    ]
+    ],
 }
 
 

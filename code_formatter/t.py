@@ -3,13 +3,14 @@
 automatically type annoate functions that did not return a value or yeild a value
 """
 from __future__ import annotations
+
 import argparse
 import ast
 
 from tokenize_rt import Offset
+from tokenize_rt import reversed_enumerate
 from tokenize_rt import src_to_tokens
 from tokenize_rt import tokens_to_src
-from tokenize_rt import reversed_enumerate
 
 
 def _all_annotated(node: ast.FunctionDef) -> bool:

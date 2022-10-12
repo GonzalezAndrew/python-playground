@@ -1,12 +1,11 @@
-import boto3
-from datetime import datetime
 import argparse
-
 import os
 import sys
+from datetime import datetime
 from typing import Optional
 from typing import Sequence
 
+import boto3
 from rich.console import Console
 from rich.table import Table
 
@@ -21,7 +20,7 @@ Usage:
     python3 wafls.py --profile liveoak-tech --region us-east-1
 
     # use environment variables
-    python3 wafls.py 
+    python3 wafls.py
 
 Example output:
 
@@ -95,6 +94,7 @@ def output_table(title: str, data: list) -> int:
 
     console.print(table)
     console.print()
+
 
 def waf_ls(session: boto3.session.Session, region: str) -> int:
     """Output IP Sets for all WAF rules in the given AWS region.

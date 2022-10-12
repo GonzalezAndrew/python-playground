@@ -1,11 +1,13 @@
-import paramiko
-import time
 import contextlib
-from typing import Generator
-import traceback
 import datetime
-import boto3
 import os
+import time
+import traceback
+from typing import Generator
+
+import boto3
+
+import paramiko
 
 
 @contextlib.contextmanager
@@ -104,7 +106,8 @@ def main() -> int:
             private_key_path="/Users/andrewgonzalez/.ssh/keys/work/aws-main.pem",
         ) as ssh_client:
             outputs = run_remote_command(
-                ssh_client=ssh_client, command="docker --version"
+                ssh_client=ssh_client,
+                command="docker --version",
             )
             print("Results:")
             for output in outputs:

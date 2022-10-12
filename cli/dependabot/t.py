@@ -1,11 +1,10 @@
 import argparse
 import os
 import sys
+from pathlib import Path
 
 from ruamel.yaml import YAML
 from ruamel.yaml.scalarstring import DoubleQuotedScalarString as DQ
-
-from pathlib import Path
 
 """
 A simple script to update the dependabot.yml file. Currently dependabot does not recursively search through directories
@@ -62,7 +61,9 @@ def get_dirs(path: str, file_ext: str) -> list:
 
 
 def generate_yaml_data(
-    repo_path: str, dirs: list, package_ecosystem: str = "terraform"
+    repo_path: str,
+    dirs: list,
+    package_ecosystem: str = "terraform",
 ):
     """Generate the dependabot yaml data which will be written to the dependabot file.
     :param dirs: The directories to add to the dependabot.yml file.
@@ -72,7 +73,7 @@ def generate_yaml_data(
     """
     if len(dirs) == 0:
         raise Exception(
-            "The list dirs cannot be empty, please ensure the script is correctly gathering the directory information."
+            "The list dirs cannot be empty, please ensure the script is correctly gathering the directory information.",
         )
 
     main_data = {"version": 2, "updates": []}
@@ -129,7 +130,9 @@ def main(argv=None):
     )
 
     parser.add_argument(
-        "--update", action="store_true", help="Update the dependabot.yml config file."
+        "--update",
+        action="store_true",
+        help="Update the dependabot.yml config file.",
     )
 
     yaml = yaml_config()
