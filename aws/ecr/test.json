@@ -1,0 +1,406 @@
+{
+    "registryId": "009964960881",
+    "repositoryName": "base",
+    "lifecyclePolicyText": "{\"rules\":[{\"action\":{\"type\":\"expire\"},\"selection\":{\"countType\":\"sinceImagePushed\",\"countUnit\":\"days\",\"countNumber\":14,\"tagStatus\":\"untagged\"},\"description\":\"Delete untagged images who are older than 14 days\",\"rulePriority\":10},{\"action\":{\"type\":\"expire\"},\"selection\":{\"countType\":\"imageCountMoreThan\",\"countNumber\":1,\"tagStatus\":\"tagged\",\"tagPrefixList\":[\"master\"]},\"description\":\"Delete any duplicate master tagged images and protect master tagged images from further rules.\",\"rulePriority\":20},{\"action\":{\"type\":\"expire\"},\"selection\":{\"countType\":\"imageCountMoreThan\",\"countNumber\":1,\"tagStatus\":\"tagged\",\"tagPrefixList\":[\"latest\"]},\"description\":\"Delete any duplicate latest tagged images and protect master tagged images from further rules.\",\"rulePriority\":30},{\"action\":{\"type\":\"expire\"},\"selection\":{\"countType\":\"imageCountMoreThan\",\"countNumber\":1,\"tagStatus\":\"tagged\",\"tagPrefixList\":[\"staging\"]},\"description\":\"Delete any duplicate staging tagged images and protect master tagged images from further rules.\",\"rulePriority\":40},{\"action\":{\"type\":\"expire\"},\"selection\":{\"countType\":\"imageCountMoreThan\",\"countNumber\":1,\"tagStatus\":\"tagged\",\"tagPrefixList\":[\"develop\"]},\"description\":\"Delete any duplicate develop tagged images and protect master tagged images from further rules.\",\"rulePriority\":50},{\"action\":{\"type\":\"expire\"},\"selection\":{\"countType\":\"sinceImagePushed\",\"countUnit\":\"days\",\"countNumber\":14,\"tagStatus\":\"any\"},\"description\":\"Delete any image who are older than 14 days.\",\"rulePriority\":60}]}",
+    "status": "COMPLETE",
+    "previewResults": [
+        {
+            "imageTags": [
+                "alpine3.14-ruby2.7.4-20210907"
+            ],
+            "imageDigest": "sha256:d63a262c98f665cbc6a51481194028cbbe0426dfeae0bfd9314032a17995aa57",
+            "imagePushedAt": "2021-09-07 13:36:41-05:00",
+            "action": {
+                "type": "EXPIRE"
+            },
+            "appliedRulePriority": 60
+        },
+        {
+            "imageTags": [
+                "alpine3.14-ruby2.7.4-12cedcb"
+            ],
+            "imageDigest": "sha256:80692ed70afa574b7dd199c1bf4f77cda737deb8f3fb1b2b03142de7e9765a0a",
+            "imagePushedAt": "2021-10-06 12:54:35-05:00",
+            "action": {
+                "type": "EXPIRE"
+            },
+            "appliedRulePriority": 60
+        },
+        {
+            "imageTags": [
+                "d5af740",
+                "infra-303-update-app-base-image"
+            ],
+            "imageDigest": "sha256:4a29f915133914e25944686765326f7785eea0aa15b79aab73c4fd8ddad27bde",
+            "imagePushedAt": "2021-10-06 14:05:19-05:00",
+            "action": {
+                "type": "EXPIRE"
+            },
+            "appliedRulePriority": 60
+        },
+        {
+            "imageTags": [
+                "035a1c5",
+                "test2",
+                "test"
+            ],
+            "imageDigest": "sha256:b4aeddc3fb68e21d8f84c43872c56417173fa091c36ba517f37e72e8efe6ee19",
+            "imagePushedAt": "2021-10-11 09:00:08-05:00",
+            "action": {
+                "type": "EXPIRE"
+            },
+            "appliedRulePriority": 60
+        },
+        {
+            "imageTags": [
+                "0127f0a"
+            ],
+            "imageDigest": "sha256:033460e0b7f07916f34200fc4d6689ea0387f633409bfef8c892908af1ef348a",
+            "imagePushedAt": "2021-10-12 18:34:37-05:00",
+            "action": {
+                "type": "EXPIRE"
+            },
+            "appliedRulePriority": 60
+        },
+        {
+            "imageTags": [
+                "49e5e31"
+            ],
+            "imageDigest": "sha256:431f18919e61fe109e56466a7a01049cb8c23b7d0653a2838683fb9ba42be43b",
+            "imagePushedAt": "2022-01-26 13:31:39-06:00",
+            "action": {
+                "type": "EXPIRE"
+            },
+            "appliedRulePriority": 60
+        },
+        {
+            "imageTags": [
+                "arm64-02-23-2022-1"
+            ],
+            "imageDigest": "sha256:af56d22b53fc57b0f3f843361fb2491a125ffe47692a9cbdbf40f24c4b916547",
+            "imagePushedAt": "2022-02-23 14:09:13-06:00",
+            "action": {
+                "type": "EXPIRE"
+            },
+            "appliedRulePriority": 60
+        },
+        {
+            "imageTags": [
+                "arm64-02-23-2022-2"
+            ],
+            "imageDigest": "sha256:82a701a250b9e3d9520abc9c639d4a498a89e7f69264da10233a11f6a71f1d15",
+            "imagePushedAt": "2022-02-23 16:14:40-06:00",
+            "action": {
+                "type": "EXPIRE"
+            },
+            "appliedRulePriority": 60
+        },
+        {
+            "imageTags": [
+                "arm64-02-24-2022-5"
+            ],
+            "imageDigest": "sha256:5ffbe3d2410392dc63c98845ad4f76817e18a4a14bdcf3997e8e4ca59848ad48",
+            "imagePushedAt": "2022-02-24 16:26:17-06:00",
+            "action": {
+                "type": "EXPIRE"
+            },
+            "appliedRulePriority": 60
+        },
+        {
+            "imageTags": [],
+            "imageDigest": "sha256:bcbe1ea330cab5d821e95eccec156142b6aa5a941dae43a078227431509bf630",
+            "imagePushedAt": "2022-03-10 12:40:40-06:00",
+            "action": {
+                "type": "EXPIRE"
+            },
+            "appliedRulePriority": 10
+        },
+        {
+            "imageTags": [],
+            "imageDigest": "sha256:035c58c7a60dc8da4816a2746a3763711213773ed046b869ec6bdeb7a185adb7",
+            "imagePushedAt": "2022-03-10 12:40:40-06:00",
+            "action": {
+                "type": "EXPIRE"
+            },
+            "appliedRulePriority": 10
+        },
+        {
+            "imageTags": [
+                "arm64-and-amd64-02-24-2022-6"
+            ],
+            "imageDigest": "sha256:f3b2d1c3f5770d6272d59bccadfea340eb625772bba5cbf0fcd6e99bf59fd3d0",
+            "imagePushedAt": "2022-03-10 12:40:40-06:00",
+            "action": {
+                "type": "EXPIRE"
+            },
+            "appliedRulePriority": 60
+        },
+        {
+            "imageTags": [],
+            "imageDigest": "sha256:e512adf8c4961ef1d6bb01fa669da1ab19e922793c11da3f7bd3cc793a22b811",
+            "imagePushedAt": "2022-03-11 15:11:51-06:00",
+            "action": {
+                "type": "EXPIRE"
+            },
+            "appliedRulePriority": 10
+        },
+        {
+            "imageTags": [
+                "a8ab452"
+            ],
+            "imageDigest": "sha256:393781b9285ed205597d0ee182e93447cd905b0846d979e5451a550358a7c265",
+            "imagePushedAt": "2022-03-11 15:11:51-06:00",
+            "action": {
+                "type": "EXPIRE"
+            },
+            "appliedRulePriority": 60
+        },
+        {
+            "imageTags": [],
+            "imageDigest": "sha256:a8a18fc0ba9e1d9e1b4cd264e4653d5258805e13d7eaf11ad59b5ffa7139e475",
+            "imagePushedAt": "2022-03-11 15:11:51-06:00",
+            "action": {
+                "type": "EXPIRE"
+            },
+            "appliedRulePriority": 10
+        },
+        {
+            "imageTags": [],
+            "imageDigest": "sha256:0fdebdb8d417a660f7a3d53c75ef7b25774624e73ff3a36a00e1ee40820745ec",
+            "imagePushedAt": "2022-03-11 15:48:14-06:00",
+            "action": {
+                "type": "EXPIRE"
+            },
+            "appliedRulePriority": 10
+        },
+        {
+            "imageTags": [],
+            "imageDigest": "sha256:e5106ed2eea66c56f29717c1ef9f5acccd67d2f2222cb28cb8e13985f31238eb",
+            "imagePushedAt": "2022-03-11 15:48:15-06:00",
+            "action": {
+                "type": "EXPIRE"
+            },
+            "appliedRulePriority": 10
+        },
+        {
+            "imageTags": [
+                "31475b3",
+                "arm64-and-amd64-03-10-2022-1"
+            ],
+            "imageDigest": "sha256:37ed70138d799e9b3c3d9e15b434391805203cd8b5103c7b05360a3335a1cc7b",
+            "imagePushedAt": "2022-03-11 15:48:15-06:00",
+            "action": {
+                "type": "EXPIRE"
+            },
+            "appliedRulePriority": 60
+        },
+        {
+            "imageTags": [],
+            "imageDigest": "sha256:7252cdd76a19e7fa94488f9d1149e233e9d3d2e30dda84a20a2c726159a09383",
+            "imagePushedAt": "2022-03-11 16:53:59-06:00",
+            "action": {
+                "type": "EXPIRE"
+            },
+            "appliedRulePriority": 10
+        },
+        {
+            "imageTags": [
+                "4e7deff"
+            ],
+            "imageDigest": "sha256:a58754ca6f49590878b7f850df1b6db40169cde2db529a5efc8b66c9c1a63e60",
+            "imagePushedAt": "2022-03-11 16:53:59-06:00",
+            "action": {
+                "type": "EXPIRE"
+            },
+            "appliedRulePriority": 60
+        },
+        {
+            "imageTags": [],
+            "imageDigest": "sha256:f8cbea001cc88e3e3de802196d521c9b60ce99c534c95c9519b4fb3ba70bf9bc",
+            "imagePushedAt": "2022-03-11 16:53:59-06:00",
+            "action": {
+                "type": "EXPIRE"
+            },
+            "appliedRulePriority": 10
+        },
+        {
+            "imageTags": [],
+            "imageDigest": "sha256:484b64f4d9fe721f45c770c0ca3915f0e1f0ebeb6bb38acc897c4c70ebf1f8cd",
+            "imagePushedAt": "2022-03-11 18:29:35-06:00",
+            "action": {
+                "type": "EXPIRE"
+            },
+            "appliedRulePriority": 10
+        },
+        {
+            "imageTags": [],
+            "imageDigest": "sha256:992b7f0f1ef6c7d95f38c8be3f43b64358a57174727405b3cfb62fb292716351",
+            "imagePushedAt": "2022-03-11 18:29:35-06:00",
+            "action": {
+                "type": "EXPIRE"
+            },
+            "appliedRulePriority": 10
+        },
+        {
+            "imageTags": [
+                "e9a349d"
+            ],
+            "imageDigest": "sha256:7967e7dcda6d67ed8295798e7e2c0c4c87550fed5b52dbdfa80d48d556ea2143",
+            "imagePushedAt": "2022-03-11 18:29:36-06:00",
+            "action": {
+                "type": "EXPIRE"
+            },
+            "appliedRulePriority": 60
+        },
+        {
+            "imageTags": [],
+            "imageDigest": "sha256:7edce063892208659a33e567b342d6c5652422c2b5b8d8eecb35a02f165a016a",
+            "imagePushedAt": "2022-03-14 11:00:47-05:00",
+            "action": {
+                "type": "EXPIRE"
+            },
+            "appliedRulePriority": 10
+        },
+        {
+            "imageTags": [],
+            "imageDigest": "sha256:a3718a32e56e9832062d30dd2f9dbda65a89a7ddd53300a24cf420f502f800e0",
+            "imagePushedAt": "2022-03-14 11:00:48-05:00",
+            "action": {
+                "type": "EXPIRE"
+            },
+            "appliedRulePriority": 10
+        },
+        {
+            "imageTags": [
+                "6fa3b4c"
+            ],
+            "imageDigest": "sha256:c70b2dbb6addb7f122314a527a761721665b3941c4428ef45403fe371379ee41",
+            "imagePushedAt": "2022-03-14 11:00:48-05:00",
+            "action": {
+                "type": "EXPIRE"
+            },
+            "appliedRulePriority": 60
+        },
+        {
+            "imageTags": [],
+            "imageDigest": "sha256:af513e7e9a8372f879f6b4f804ed469ccfca14ac5b5a0c0abc455df1494ec3e0",
+            "imagePushedAt": "2022-04-14 16:50:41-05:00",
+            "action": {
+                "type": "EXPIRE"
+            },
+            "appliedRulePriority": 10
+        },
+        {
+            "imageTags": [],
+            "imageDigest": "sha256:c5a42ae7c071e8974bb47a4c2a86bb7949a3f6d8a7493d3cb830f69846ccab2d",
+            "imagePushedAt": "2022-04-14 16:50:42-05:00",
+            "action": {
+                "type": "EXPIRE"
+            },
+            "appliedRulePriority": 10
+        },
+        {
+            "imageTags": [
+                "alpine3.14",
+                "3792541",
+                "ruby2.7.4"
+            ],
+            "imageDigest": "sha256:47383965e0203cd6772b2eaae6b670590cbeca3558bc31fbebfa53f79143aa0f",
+            "imagePushedAt": "2022-04-14 16:50:42-05:00",
+            "action": {
+                "type": "EXPIRE"
+            },
+            "appliedRulePriority": 60
+        },
+        {
+            "imageTags": [],
+            "imageDigest": "sha256:44f7fe69fdb92491ed557194896e4067d317ab418d1df1e45420c71246961c54",
+            "imagePushedAt": "2022-04-21 19:41:40-05:00",
+            "action": {
+                "type": "EXPIRE"
+            },
+            "appliedRulePriority": 10
+        },
+        {
+            "imageTags": [],
+            "imageDigest": "sha256:261071ca036c5d4f34bfa4337abe56d1796be3197d42ca1dbd2c4e76d9246b59",
+            "imagePushedAt": "2022-04-21 19:41:40-05:00",
+            "action": {
+                "type": "EXPIRE"
+            },
+            "appliedRulePriority": 10
+        },
+        {
+            "imageTags": [
+                "2c41471"
+            ],
+            "imageDigest": "sha256:87e6b98f8ba44a50643b796f5b22bd3fb13feeabecb3d953361cf2f51f5ef0e8",
+            "imagePushedAt": "2022-04-21 19:41:41-05:00",
+            "action": {
+                "type": "EXPIRE"
+            },
+            "appliedRulePriority": 60
+        },
+        {
+            "imageTags": [],
+            "imageDigest": "sha256:7c5a75dc949e77105771385a9274e0943058488f6a589fa9de34e526c9582071",
+            "imagePushedAt": "2022-05-05 16:42:07-05:00",
+            "action": {
+                "type": "EXPIRE"
+            },
+            "appliedRulePriority": 10
+        },
+        {
+            "imageTags": [],
+            "imageDigest": "sha256:08e69e6d9a17a74bafd02f752f5b6aec604feff4b14f01b508999aea9d2bdb5c",
+            "imagePushedAt": "2022-05-05 16:42:07-05:00",
+            "action": {
+                "type": "EXPIRE"
+            },
+            "appliedRulePriority": 10
+        },
+        {
+            "imageTags": [
+                "cb1e1d1"
+            ],
+            "imageDigest": "sha256:564098458cddd8b25fc0c1fb0671017b916c2eae59e375be02ac2646cfd4816d",
+            "imagePushedAt": "2022-05-05 16:42:08-05:00",
+            "action": {
+                "type": "EXPIRE"
+            },
+            "appliedRulePriority": 60
+        },
+        {
+            "imageTags": [],
+            "imageDigest": "sha256:0d0be480c212fb00957c61d5718d626edc03de2fb110d3b02ba1b1e753d95130",
+            "imagePushedAt": "2022-09-06 17:14:48-05:00",
+            "action": {
+                "type": "EXPIRE"
+            },
+            "appliedRulePriority": 10
+        },
+        {
+            "imageTags": [],
+            "imageDigest": "sha256:55f8e44165b5b35c767abfd8208d0d4dae88fde5777e026fd64425ac578ea859",
+            "imagePushedAt": "2022-09-06 17:14:48-05:00",
+            "action": {
+                "type": "EXPIRE"
+            },
+            "appliedRulePriority": 10
+        }
+    ],
+    "summary": {
+        "expiringImageTotalCount": 38
+    },
+    "ResponseMetadata": {
+        "RequestId": "606ee438-0add-443a-9285-ec2a9c70b543",
+        "HTTPStatusCode": 200,
+        "HTTPHeaders": {
+            "x-amzn-requestid": "606ee438-0add-443a-9285-ec2a9c70b543",
+            "date": "Tue, 11 Oct 2022 15:42:35 GMT",
+            "content-type": "application/x-amz-json-1.1",
+            "content-length": "9305"
+        },
+        "RetryAttempts": 0
+    }
+}

@@ -1,0 +1,1751 @@
+Resource Name,Resource Cloud Provider ID,Resource Object Type,Resource Native Type,Compliance Check Name,Result,Severity,Policy Name,Assessed At,Remediation
+acl-18067171,acl-18067171,CloudPlatform/Firewall,networkAcl,5.1 Ensure no Network ACLs allow ingress from 0.0.0.0/0 to remote server administration ports,FAIL,HIGH,Network ACL should restrict access over remote administration ports,2022-05-17T01:19:51Z,"Perform the following commands to delete or modify an inbound NACL rule to restrict remote administration ports access to specific entities via AWS CLI:   
+**1.** To view the current NACL configuration:   
+```  
+aws ec2 describe-network-acls --network-acl-ids {{naclId}}  
+```  
+**2.** To modify an inbound rule, use the rule number from the previous output in the following command, and insert the wanted port range and IP CIDR:  
+```  
+aws ec2 replace-network-acl-entry --network-acl-id   --protocol tcp --rule-action allow --rule-number <ruleNumber> --ingress --cidr-block <ipCidr> --port-range From=<port>,To=<port>  
+```   
+**3.** To delete an unrestricted rule (allowed ingress connection of SSH\ RDP with 0.0.0.0/0) use the rule number from the previous output in the following command:  
+  
+```  
+aws ec2 delete-network-acl-entry --network-acl-id {{naclId}} --ingress --rule-number <ruleNumber>  
+```"
+acl-0e39134d1aa607be9,acl-0e39134d1aa607be9,CloudPlatform/Firewall,networkAcl,5.1 Ensure no Network ACLs allow ingress from 0.0.0.0/0 to remote server administration ports,FAIL,HIGH,Network ACL should restrict access over remote administration ports,2022-05-17T01:15:50Z,"Perform the following commands to delete or modify an inbound NACL rule to restrict remote administration ports access to specific entities via AWS CLI:   
+**1.** To view the current NACL configuration:   
+```  
+aws ec2 describe-network-acls --network-acl-ids {{naclId}}  
+```  
+**2.** To modify an inbound rule, use the rule number from the previous output in the following command, and insert the wanted port range and IP CIDR:  
+```  
+aws ec2 replace-network-acl-entry --network-acl-id   --protocol tcp --rule-action allow --rule-number <ruleNumber> --ingress --cidr-block <ipCidr> --port-range From=<port>,To=<port>  
+```   
+**3.** To delete an unrestricted rule (allowed ingress connection of SSH\ RDP with 0.0.0.0/0) use the rule number from the previous output in the following command:  
+  
+```  
+aws ec2 delete-network-acl-entry --network-acl-id {{naclId}} --ingress --rule-number <ruleNumber>  
+```"
+acl-76a53910,acl-76a53910,CloudPlatform/Firewall,networkAcl,5.1 Ensure no Network ACLs allow ingress from 0.0.0.0/0 to remote server administration ports,FAIL,HIGH,Network ACL should restrict access over remote administration ports,2022-05-17T01:19:52Z,"Perform the following commands to delete or modify an inbound NACL rule to restrict remote administration ports access to specific entities via AWS CLI:   
+**1.** To view the current NACL configuration:   
+```  
+aws ec2 describe-network-acls --network-acl-ids {{naclId}}  
+```  
+**2.** To modify an inbound rule, use the rule number from the previous output in the following command, and insert the wanted port range and IP CIDR:  
+```  
+aws ec2 replace-network-acl-entry --network-acl-id   --protocol tcp --rule-action allow --rule-number <ruleNumber> --ingress --cidr-block <ipCidr> --port-range From=<port>,To=<port>  
+```   
+**3.** To delete an unrestricted rule (allowed ingress connection of SSH\ RDP with 0.0.0.0/0) use the rule number from the previous output in the following command:  
+  
+```  
+aws ec2 delete-network-acl-entry --network-acl-id {{naclId}} --ingress --rule-number <ruleNumber>  
+```"
+acl-055956aaf64da8b67,acl-055956aaf64da8b67,CloudPlatform/Firewall,networkAcl,5.1 Ensure no Network ACLs allow ingress from 0.0.0.0/0 to remote server administration ports,FAIL,HIGH,Network ACL should restrict access over remote administration ports,2022-05-17T10:30:20Z,"Perform the following commands to delete or modify an inbound NACL rule to restrict remote administration ports access to specific entities via AWS CLI:   
+**1.** To view the current NACL configuration:   
+```  
+aws ec2 describe-network-acls --network-acl-ids {{naclId}}  
+```  
+**2.** To modify an inbound rule, use the rule number from the previous output in the following command, and insert the wanted port range and IP CIDR:  
+```  
+aws ec2 replace-network-acl-entry --network-acl-id   --protocol tcp --rule-action allow --rule-number <ruleNumber> --ingress --cidr-block <ipCidr> --port-range From=<port>,To=<port>  
+```   
+**3.** To delete an unrestricted rule (allowed ingress connection of SSH\ RDP with 0.0.0.0/0) use the rule number from the previous output in the following command:  
+  
+```  
+aws ec2 delete-network-acl-entry --network-acl-id {{naclId}} --ingress --rule-number <ruleNumber>  
+```"
+acl-a908bbd2,acl-a908bbd2,CloudPlatform/Firewall,networkAcl,5.1 Ensure no Network ACLs allow ingress from 0.0.0.0/0 to remote server administration ports,FAIL,HIGH,Network ACL should restrict access over remote administration ports,2022-05-17T01:19:49Z,"Perform the following commands to delete or modify an inbound NACL rule to restrict remote administration ports access to specific entities via AWS CLI:   
+**1.** To view the current NACL configuration:   
+```  
+aws ec2 describe-network-acls --network-acl-ids {{naclId}}  
+```  
+**2.** To modify an inbound rule, use the rule number from the previous output in the following command, and insert the wanted port range and IP CIDR:  
+```  
+aws ec2 replace-network-acl-entry --network-acl-id   --protocol tcp --rule-action allow --rule-number <ruleNumber> --ingress --cidr-block <ipCidr> --port-range From=<port>,To=<port>  
+```   
+**3.** To delete an unrestricted rule (allowed ingress connection of SSH\ RDP with 0.0.0.0/0) use the rule number from the previous output in the following command:  
+  
+```  
+aws ec2 delete-network-acl-entry --network-acl-id {{naclId}} --ingress --rule-number <ruleNumber>  
+```"
+acl-06a3c8c64584cf395,acl-06a3c8c64584cf395,CloudPlatform/Firewall,networkAcl,5.1 Ensure no Network ACLs allow ingress from 0.0.0.0/0 to remote server administration ports,FAIL,HIGH,Network ACL should restrict access over remote administration ports,2022-05-17T10:30:26Z,"Perform the following commands to delete or modify an inbound NACL rule to restrict remote administration ports access to specific entities via AWS CLI:   
+**1.** To view the current NACL configuration:   
+```  
+aws ec2 describe-network-acls --network-acl-ids {{naclId}}  
+```  
+**2.** To modify an inbound rule, use the rule number from the previous output in the following command, and insert the wanted port range and IP CIDR:  
+```  
+aws ec2 replace-network-acl-entry --network-acl-id   --protocol tcp --rule-action allow --rule-number <ruleNumber> --ingress --cidr-block <ipCidr> --port-range From=<port>,To=<port>  
+```   
+**3.** To delete an unrestricted rule (allowed ingress connection of SSH\ RDP with 0.0.0.0/0) use the rule number from the previous output in the following command:  
+  
+```  
+aws ec2 delete-network-acl-entry --network-acl-id {{naclId}} --ingress --rule-number <ruleNumber>  
+```"
+acl-5a20f533,acl-5a20f533,CloudPlatform/Firewall,networkAcl,5.1 Ensure no Network ACLs allow ingress from 0.0.0.0/0 to remote server administration ports,FAIL,HIGH,Network ACL should restrict access over remote administration ports,2022-05-17T01:17:15Z,"Perform the following commands to delete or modify an inbound NACL rule to restrict remote administration ports access to specific entities via AWS CLI:   
+**1.** To view the current NACL configuration:   
+```  
+aws ec2 describe-network-acls --network-acl-ids {{naclId}}  
+```  
+**2.** To modify an inbound rule, use the rule number from the previous output in the following command, and insert the wanted port range and IP CIDR:  
+```  
+aws ec2 replace-network-acl-entry --network-acl-id   --protocol tcp --rule-action allow --rule-number <ruleNumber> --ingress --cidr-block <ipCidr> --port-range From=<port>,To=<port>  
+```   
+**3.** To delete an unrestricted rule (allowed ingress connection of SSH\ RDP with 0.0.0.0/0) use the rule number from the previous output in the following command:  
+  
+```  
+aws ec2 delete-network-acl-entry --network-acl-id {{naclId}} --ingress --rule-number <ruleNumber>  
+```"
+acl-9391ecee,acl-9391ecee,CloudPlatform/Firewall,networkAcl,5.1 Ensure no Network ACLs allow ingress from 0.0.0.0/0 to remote server administration ports,FAIL,HIGH,Network ACL should restrict access over remote administration ports,2022-05-17T10:28:05Z,"Perform the following commands to delete or modify an inbound NACL rule to restrict remote administration ports access to specific entities via AWS CLI:   
+**1.** To view the current NACL configuration:   
+```  
+aws ec2 describe-network-acls --network-acl-ids {{naclId}}  
+```  
+**2.** To modify an inbound rule, use the rule number from the previous output in the following command, and insert the wanted port range and IP CIDR:  
+```  
+aws ec2 replace-network-acl-entry --network-acl-id   --protocol tcp --rule-action allow --rule-number <ruleNumber> --ingress --cidr-block <ipCidr> --port-range From=<port>,To=<port>  
+```   
+**3.** To delete an unrestricted rule (allowed ingress connection of SSH\ RDP with 0.0.0.0/0) use the rule number from the previous output in the following command:  
+  
+```  
+aws ec2 delete-network-acl-entry --network-acl-id {{naclId}} --ingress --rule-number <ruleNumber>  
+```"
+acl-4df27b2b,acl-4df27b2b,CloudPlatform/Firewall,networkAcl,5.1 Ensure no Network ACLs allow ingress from 0.0.0.0/0 to remote server administration ports,FAIL,HIGH,Network ACL should restrict access over remote administration ports,2022-05-17T01:19:53Z,"Perform the following commands to delete or modify an inbound NACL rule to restrict remote administration ports access to specific entities via AWS CLI:   
+**1.** To view the current NACL configuration:   
+```  
+aws ec2 describe-network-acls --network-acl-ids {{naclId}}  
+```  
+**2.** To modify an inbound rule, use the rule number from the previous output in the following command, and insert the wanted port range and IP CIDR:  
+```  
+aws ec2 replace-network-acl-entry --network-acl-id   --protocol tcp --rule-action allow --rule-number <ruleNumber> --ingress --cidr-block <ipCidr> --port-range From=<port>,To=<port>  
+```   
+**3.** To delete an unrestricted rule (allowed ingress connection of SSH\ RDP with 0.0.0.0/0) use the rule number from the previous output in the following command:  
+  
+```  
+aws ec2 delete-network-acl-entry --network-acl-id {{naclId}} --ingress --rule-number <ruleNumber>  
+```"
+acl-0375afa5871c01472,acl-0375afa5871c01472,CloudPlatform/Firewall,networkAcl,5.1 Ensure no Network ACLs allow ingress from 0.0.0.0/0 to remote server administration ports,FAIL,HIGH,Network ACL should restrict access over remote administration ports,2022-05-17T01:15:50Z,"Perform the following commands to delete or modify an inbound NACL rule to restrict remote administration ports access to specific entities via AWS CLI:   
+**1.** To view the current NACL configuration:   
+```  
+aws ec2 describe-network-acls --network-acl-ids {{naclId}}  
+```  
+**2.** To modify an inbound rule, use the rule number from the previous output in the following command, and insert the wanted port range and IP CIDR:  
+```  
+aws ec2 replace-network-acl-entry --network-acl-id   --protocol tcp --rule-action allow --rule-number <ruleNumber> --ingress --cidr-block <ipCidr> --port-range From=<port>,To=<port>  
+```   
+**3.** To delete an unrestricted rule (allowed ingress connection of SSH\ RDP with 0.0.0.0/0) use the rule number from the previous output in the following command:  
+  
+```  
+aws ec2 delete-network-acl-entry --network-acl-id {{naclId}} --ingress --rule-number <ruleNumber>  
+```"
+acl-e2ac3889,acl-e2ac3889,CloudPlatform/Firewall,networkAcl,5.1 Ensure no Network ACLs allow ingress from 0.0.0.0/0 to remote server administration ports,FAIL,HIGH,Network ACL should restrict access over remote administration ports,2022-05-17T01:15:48Z,"Perform the following commands to delete or modify an inbound NACL rule to restrict remote administration ports access to specific entities via AWS CLI:   
+**1.** To view the current NACL configuration:   
+```  
+aws ec2 describe-network-acls --network-acl-ids {{naclId}}  
+```  
+**2.** To modify an inbound rule, use the rule number from the previous output in the following command, and insert the wanted port range and IP CIDR:  
+```  
+aws ec2 replace-network-acl-entry --network-acl-id   --protocol tcp --rule-action allow --rule-number <ruleNumber> --ingress --cidr-block <ipCidr> --port-range From=<port>,To=<port>  
+```   
+**3.** To delete an unrestricted rule (allowed ingress connection of SSH\ RDP with 0.0.0.0/0) use the rule number from the previous output in the following command:  
+  
+```  
+aws ec2 delete-network-acl-entry --network-acl-id {{naclId}} --ingress --rule-number <ruleNumber>  
+```"
+acl-cfafc7b6,acl-cfafc7b6,CloudPlatform/Firewall,networkAcl,5.1 Ensure no Network ACLs allow ingress from 0.0.0.0/0 to remote server administration ports,FAIL,HIGH,Network ACL should restrict access over remote administration ports,2022-05-17T01:15:45Z,"Perform the following commands to delete or modify an inbound NACL rule to restrict remote administration ports access to specific entities via AWS CLI:   
+**1.** To view the current NACL configuration:   
+```  
+aws ec2 describe-network-acls --network-acl-ids {{naclId}}  
+```  
+**2.** To modify an inbound rule, use the rule number from the previous output in the following command, and insert the wanted port range and IP CIDR:  
+```  
+aws ec2 replace-network-acl-entry --network-acl-id   --protocol tcp --rule-action allow --rule-number <ruleNumber> --ingress --cidr-block <ipCidr> --port-range From=<port>,To=<port>  
+```   
+**3.** To delete an unrestricted rule (allowed ingress connection of SSH\ RDP with 0.0.0.0/0) use the rule number from the previous output in the following command:  
+  
+```  
+aws ec2 delete-network-acl-entry --network-acl-id {{naclId}} --ingress --rule-number <ruleNumber>  
+```"
+acl-19d51271,acl-19d51271,CloudPlatform/Firewall,networkAcl,5.1 Ensure no Network ACLs allow ingress from 0.0.0.0/0 to remote server administration ports,FAIL,HIGH,Network ACL should restrict access over remote administration ports,2022-05-17T01:19:50Z,"Perform the following commands to delete or modify an inbound NACL rule to restrict remote administration ports access to specific entities via AWS CLI:   
+**1.** To view the current NACL configuration:   
+```  
+aws ec2 describe-network-acls --network-acl-ids {{naclId}}  
+```  
+**2.** To modify an inbound rule, use the rule number from the previous output in the following command, and insert the wanted port range and IP CIDR:  
+```  
+aws ec2 replace-network-acl-entry --network-acl-id   --protocol tcp --rule-action allow --rule-number <ruleNumber> --ingress --cidr-block <ipCidr> --port-range From=<port>,To=<port>  
+```   
+**3.** To delete an unrestricted rule (allowed ingress connection of SSH\ RDP with 0.0.0.0/0) use the rule number from the previous output in the following command:  
+  
+```  
+aws ec2 delete-network-acl-entry --network-acl-id {{naclId}} --ingress --rule-number <ruleNumber>  
+```"
+acl-d3856db5,acl-d3856db5,CloudPlatform/Firewall,networkAcl,5.1 Ensure no Network ACLs allow ingress from 0.0.0.0/0 to remote server administration ports,FAIL,HIGH,Network ACL should restrict access over remote administration ports,2022-05-17T01:19:51Z,"Perform the following commands to delete or modify an inbound NACL rule to restrict remote administration ports access to specific entities via AWS CLI:   
+**1.** To view the current NACL configuration:   
+```  
+aws ec2 describe-network-acls --network-acl-ids {{naclId}}  
+```  
+**2.** To modify an inbound rule, use the rule number from the previous output in the following command, and insert the wanted port range and IP CIDR:  
+```  
+aws ec2 replace-network-acl-entry --network-acl-id   --protocol tcp --rule-action allow --rule-number <ruleNumber> --ingress --cidr-block <ipCidr> --port-range From=<port>,To=<port>  
+```   
+**3.** To delete an unrestricted rule (allowed ingress connection of SSH\ RDP with 0.0.0.0/0) use the rule number from the previous output in the following command:  
+  
+```  
+aws ec2 delete-network-acl-entry --network-acl-id {{naclId}} --ingress --rule-number <ruleNumber>  
+```"
+acl-069a5efe2dcf801d3,acl-069a5efe2dcf801d3,CloudPlatform/Firewall,networkAcl,5.1 Ensure no Network ACLs allow ingress from 0.0.0.0/0 to remote server administration ports,FAIL,HIGH,Network ACL should restrict access over remote administration ports,2022-05-17T10:31:18Z,"Perform the following commands to delete or modify an inbound NACL rule to restrict remote administration ports access to specific entities via AWS CLI:   
+**1.** To view the current NACL configuration:   
+```  
+aws ec2 describe-network-acls --network-acl-ids {{naclId}}  
+```  
+**2.** To modify an inbound rule, use the rule number from the previous output in the following command, and insert the wanted port range and IP CIDR:  
+```  
+aws ec2 replace-network-acl-entry --network-acl-id   --protocol tcp --rule-action allow --rule-number <ruleNumber> --ingress --cidr-block <ipCidr> --port-range From=<port>,To=<port>  
+```   
+**3.** To delete an unrestricted rule (allowed ingress connection of SSH\ RDP with 0.0.0.0/0) use the rule number from the previous output in the following command:  
+  
+```  
+aws ec2 delete-network-acl-entry --network-acl-id {{naclId}} --ingress --rule-number <ruleNumber>  
+```"
+acl-2a1af443,acl-2a1af443,CloudPlatform/Firewall,networkAcl,5.1 Ensure no Network ACLs allow ingress from 0.0.0.0/0 to remote server administration ports,FAIL,HIGH,Network ACL should restrict access over remote administration ports,2022-05-17T01:17:14Z,"Perform the following commands to delete or modify an inbound NACL rule to restrict remote administration ports access to specific entities via AWS CLI:   
+**1.** To view the current NACL configuration:   
+```  
+aws ec2 describe-network-acls --network-acl-ids {{naclId}}  
+```  
+**2.** To modify an inbound rule, use the rule number from the previous output in the following command, and insert the wanted port range and IP CIDR:  
+```  
+aws ec2 replace-network-acl-entry --network-acl-id   --protocol tcp --rule-action allow --rule-number <ruleNumber> --ingress --cidr-block <ipCidr> --port-range From=<port>,To=<port>  
+```   
+**3.** To delete an unrestricted rule (allowed ingress connection of SSH\ RDP with 0.0.0.0/0) use the rule number from the previous output in the following command:  
+  
+```  
+aws ec2 delete-network-acl-entry --network-acl-id {{naclId}} --ingress --rule-number <ruleNumber>  
+```"
+acl-27d44d5e,acl-27d44d5e,CloudPlatform/Firewall,networkAcl,5.1 Ensure no Network ACLs allow ingress from 0.0.0.0/0 to remote server administration ports,FAIL,HIGH,Network ACL should restrict access over remote administration ports,2022-05-17T10:30:21Z,"Perform the following commands to delete or modify an inbound NACL rule to restrict remote administration ports access to specific entities via AWS CLI:   
+**1.** To view the current NACL configuration:   
+```  
+aws ec2 describe-network-acls --network-acl-ids {{naclId}}  
+```  
+**2.** To modify an inbound rule, use the rule number from the previous output in the following command, and insert the wanted port range and IP CIDR:  
+```  
+aws ec2 replace-network-acl-entry --network-acl-id   --protocol tcp --rule-action allow --rule-number <ruleNumber> --ingress --cidr-block <ipCidr> --port-range From=<port>,To=<port>  
+```   
+**3.** To delete an unrestricted rule (allowed ingress connection of SSH\ RDP with 0.0.0.0/0) use the rule number from the previous output in the following command:  
+  
+```  
+aws ec2 delete-network-acl-entry --network-acl-id {{naclId}} --ingress --rule-number <ruleNumber>  
+```"
+acl-0dafb17debb6f7f03,acl-0dafb17debb6f7f03,CloudPlatform/Firewall,networkAcl,5.1 Ensure no Network ACLs allow ingress from 0.0.0.0/0 to remote server administration ports,FAIL,HIGH,Network ACL should restrict access over remote administration ports,2022-05-17T10:31:16Z,"Perform the following commands to delete or modify an inbound NACL rule to restrict remote administration ports access to specific entities via AWS CLI:   
+**1.** To view the current NACL configuration:   
+```  
+aws ec2 describe-network-acls --network-acl-ids {{naclId}}  
+```  
+**2.** To modify an inbound rule, use the rule number from the previous output in the following command, and insert the wanted port range and IP CIDR:  
+```  
+aws ec2 replace-network-acl-entry --network-acl-id   --protocol tcp --rule-action allow --rule-number <ruleNumber> --ingress --cidr-block <ipCidr> --port-range From=<port>,To=<port>  
+```   
+**3.** To delete an unrestricted rule (allowed ingress connection of SSH\ RDP with 0.0.0.0/0) use the rule number from the previous output in the following command:  
+  
+```  
+aws ec2 delete-network-acl-entry --network-acl-id {{naclId}} --ingress --rule-number <ruleNumber>  
+```"
+acl-029b6267,acl-029b6267,CloudPlatform/Firewall,networkAcl,5.1 Ensure no Network ACLs allow ingress from 0.0.0.0/0 to remote server administration ports,FAIL,HIGH,Network ACL should restrict access over remote administration ports,2022-05-17T01:17:14Z,"Perform the following commands to delete or modify an inbound NACL rule to restrict remote administration ports access to specific entities via AWS CLI:   
+**1.** To view the current NACL configuration:   
+```  
+aws ec2 describe-network-acls --network-acl-ids {{naclId}}  
+```  
+**2.** To modify an inbound rule, use the rule number from the previous output in the following command, and insert the wanted port range and IP CIDR:  
+```  
+aws ec2 replace-network-acl-entry --network-acl-id   --protocol tcp --rule-action allow --rule-number <ruleNumber> --ingress --cidr-block <ipCidr> --port-range From=<port>,To=<port>  
+```   
+**3.** To delete an unrestricted rule (allowed ingress connection of SSH\ RDP with 0.0.0.0/0) use the rule number from the previous output in the following command:  
+  
+```  
+aws ec2 delete-network-acl-entry --network-acl-id {{naclId}} --ingress --rule-number <ruleNumber>  
+```"
+acl-0e1b6c67,acl-0e1b6c67,CloudPlatform/Firewall,networkAcl,5.1 Ensure no Network ACLs allow ingress from 0.0.0.0/0 to remote server administration ports,FAIL,HIGH,Network ACL should restrict access over remote administration ports,2022-05-17T10:28:05Z,"Perform the following commands to delete or modify an inbound NACL rule to restrict remote administration ports access to specific entities via AWS CLI:   
+**1.** To view the current NACL configuration:   
+```  
+aws ec2 describe-network-acls --network-acl-ids {{naclId}}  
+```  
+**2.** To modify an inbound rule, use the rule number from the previous output in the following command, and insert the wanted port range and IP CIDR:  
+```  
+aws ec2 replace-network-acl-entry --network-acl-id   --protocol tcp --rule-action allow --rule-number <ruleNumber> --ingress --cidr-block <ipCidr> --port-range From=<port>,To=<port>  
+```   
+**3.** To delete an unrestricted rule (allowed ingress connection of SSH\ RDP with 0.0.0.0/0) use the rule number from the previous output in the following command:  
+  
+```  
+aws ec2 delete-network-acl-entry --network-acl-id {{naclId}} --ingress --rule-number <ruleNumber>  
+```"
+acl-563ebf30,acl-563ebf30,CloudPlatform/Firewall,networkAcl,5.1 Ensure no Network ACLs allow ingress from 0.0.0.0/0 to remote server administration ports,FAIL,HIGH,Network ACL should restrict access over remote administration ports,2022-05-17T01:15:48Z,"Perform the following commands to delete or modify an inbound NACL rule to restrict remote administration ports access to specific entities via AWS CLI:   
+**1.** To view the current NACL configuration:   
+```  
+aws ec2 describe-network-acls --network-acl-ids {{naclId}}  
+```  
+**2.** To modify an inbound rule, use the rule number from the previous output in the following command, and insert the wanted port range and IP CIDR:  
+```  
+aws ec2 replace-network-acl-entry --network-acl-id   --protocol tcp --rule-action allow --rule-number <ruleNumber> --ingress --cidr-block <ipCidr> --port-range From=<port>,To=<port>  
+```   
+**3.** To delete an unrestricted rule (allowed ingress connection of SSH\ RDP with 0.0.0.0/0) use the rule number from the previous output in the following command:  
+  
+```  
+aws ec2 delete-network-acl-entry --network-acl-id {{naclId}} --ingress --rule-number <ruleNumber>  
+```"
+acl-7b138610,acl-7b138610,CloudPlatform/Firewall,networkAcl,5.1 Ensure no Network ACLs allow ingress from 0.0.0.0/0 to remote server administration ports,FAIL,HIGH,Network ACL should restrict access over remote administration ports,2022-05-17T10:28:05Z,"Perform the following commands to delete or modify an inbound NACL rule to restrict remote administration ports access to specific entities via AWS CLI:   
+**1.** To view the current NACL configuration:   
+```  
+aws ec2 describe-network-acls --network-acl-ids {{naclId}}  
+```  
+**2.** To modify an inbound rule, use the rule number from the previous output in the following command, and insert the wanted port range and IP CIDR:  
+```  
+aws ec2 replace-network-acl-entry --network-acl-id   --protocol tcp --rule-action allow --rule-number <ruleNumber> --ingress --cidr-block <ipCidr> --port-range From=<port>,To=<port>  
+```   
+**3.** To delete an unrestricted rule (allowed ingress connection of SSH\ RDP with 0.0.0.0/0) use the rule number from the previous output in the following command:  
+  
+```  
+aws ec2 delete-network-acl-entry --network-acl-id {{naclId}} --ingress --rule-number <ruleNumber>  
+```"
+acl-5c818124,acl-5c818124,CloudPlatform/Firewall,networkAcl,5.1 Ensure no Network ACLs allow ingress from 0.0.0.0/0 to remote server administration ports,FAIL,HIGH,Network ACL should restrict access over remote administration ports,2022-05-17T01:17:25Z,"Perform the following commands to delete or modify an inbound NACL rule to restrict remote administration ports access to specific entities via AWS CLI:   
+**1.** To view the current NACL configuration:   
+```  
+aws ec2 describe-network-acls --network-acl-ids {{naclId}}  
+```  
+**2.** To modify an inbound rule, use the rule number from the previous output in the following command, and insert the wanted port range and IP CIDR:  
+```  
+aws ec2 replace-network-acl-entry --network-acl-id   --protocol tcp --rule-action allow --rule-number <ruleNumber> --ingress --cidr-block <ipCidr> --port-range From=<port>,To=<port>  
+```   
+**3.** To delete an unrestricted rule (allowed ingress connection of SSH\ RDP with 0.0.0.0/0) use the rule number from the previous output in the following command:  
+  
+```  
+aws ec2 delete-network-acl-entry --network-acl-id {{naclId}} --ingress --rule-number <ruleNumber>  
+```"
+acl-049031c135b350fe0,acl-049031c135b350fe0,CloudPlatform/Firewall,networkAcl,5.1 Ensure no Network ACLs allow ingress from 0.0.0.0/0 to remote server administration ports,FAIL,HIGH,Network ACL should restrict access over remote administration ports,2022-05-17T01:17:19Z,"Perform the following commands to delete or modify an inbound NACL rule to restrict remote administration ports access to specific entities via AWS CLI:   
+**1.** To view the current NACL configuration:   
+```  
+aws ec2 describe-network-acls --network-acl-ids {{naclId}}  
+```  
+**2.** To modify an inbound rule, use the rule number from the previous output in the following command, and insert the wanted port range and IP CIDR:  
+```  
+aws ec2 replace-network-acl-entry --network-acl-id   --protocol tcp --rule-action allow --rule-number <ruleNumber> --ingress --cidr-block <ipCidr> --port-range From=<port>,To=<port>  
+```   
+**3.** To delete an unrestricted rule (allowed ingress connection of SSH\ RDP with 0.0.0.0/0) use the rule number from the previous output in the following command:  
+  
+```  
+aws ec2 delete-network-acl-entry --network-acl-id {{naclId}} --ingress --rule-number <ruleNumber>  
+```"
+acl-bcfe6dda,acl-bcfe6dda,CloudPlatform/Firewall,networkAcl,5.1 Ensure no Network ACLs allow ingress from 0.0.0.0/0 to remote server administration ports,FAIL,HIGH,Network ACL should restrict access over remote administration ports,2022-05-17T01:17:18Z,"Perform the following commands to delete or modify an inbound NACL rule to restrict remote administration ports access to specific entities via AWS CLI:   
+**1.** To view the current NACL configuration:   
+```  
+aws ec2 describe-network-acls --network-acl-ids {{naclId}}  
+```  
+**2.** To modify an inbound rule, use the rule number from the previous output in the following command, and insert the wanted port range and IP CIDR:  
+```  
+aws ec2 replace-network-acl-entry --network-acl-id   --protocol tcp --rule-action allow --rule-number <ruleNumber> --ingress --cidr-block <ipCidr> --port-range From=<port>,To=<port>  
+```   
+**3.** To delete an unrestricted rule (allowed ingress connection of SSH\ RDP with 0.0.0.0/0) use the rule number from the previous output in the following command:  
+  
+```  
+aws ec2 delete-network-acl-entry --network-acl-id {{naclId}} --ingress --rule-number <ruleNumber>  
+```"
+acl-057548493ac7dbfbe,acl-057548493ac7dbfbe,CloudPlatform/Firewall,networkAcl,5.1 Ensure no Network ACLs allow ingress from 0.0.0.0/0 to remote server administration ports,FAIL,HIGH,Network ACL should restrict access over remote administration ports,2022-05-17T10:31:16Z,"Perform the following commands to delete or modify an inbound NACL rule to restrict remote administration ports access to specific entities via AWS CLI:   
+**1.** To view the current NACL configuration:   
+```  
+aws ec2 describe-network-acls --network-acl-ids {{naclId}}  
+```  
+**2.** To modify an inbound rule, use the rule number from the previous output in the following command, and insert the wanted port range and IP CIDR:  
+```  
+aws ec2 replace-network-acl-entry --network-acl-id   --protocol tcp --rule-action allow --rule-number <ruleNumber> --ingress --cidr-block <ipCidr> --port-range From=<port>,To=<port>  
+```   
+**3.** To delete an unrestricted rule (allowed ingress connection of SSH\ RDP with 0.0.0.0/0) use the rule number from the previous output in the following command:  
+  
+```  
+aws ec2 delete-network-acl-entry --network-acl-id {{naclId}} --ingress --rule-number <ruleNumber>  
+```"
+acl-acb4c2c7,acl-acb4c2c7,CloudPlatform/Firewall,networkAcl,5.1 Ensure no Network ACLs allow ingress from 0.0.0.0/0 to remote server administration ports,FAIL,HIGH,Network ACL should restrict access over remote administration ports,2022-05-17T01:19:52Z,"Perform the following commands to delete or modify an inbound NACL rule to restrict remote administration ports access to specific entities via AWS CLI:   
+**1.** To view the current NACL configuration:   
+```  
+aws ec2 describe-network-acls --network-acl-ids {{naclId}}  
+```  
+**2.** To modify an inbound rule, use the rule number from the previous output in the following command, and insert the wanted port range and IP CIDR:  
+```  
+aws ec2 replace-network-acl-entry --network-acl-id   --protocol tcp --rule-action allow --rule-number <ruleNumber> --ingress --cidr-block <ipCidr> --port-range From=<port>,To=<port>  
+```   
+**3.** To delete an unrestricted rule (allowed ingress connection of SSH\ RDP with 0.0.0.0/0) use the rule number from the previous output in the following command:  
+  
+```  
+aws ec2 delete-network-acl-entry --network-acl-id {{naclId}} --ingress --rule-number <ruleNumber>  
+```"
+acl-ad8585d5,acl-ad8585d5,CloudPlatform/Firewall,networkAcl,5.1 Ensure no Network ACLs allow ingress from 0.0.0.0/0 to remote server administration ports,FAIL,HIGH,Network ACL should restrict access over remote administration ports,2022-05-17T01:17:25Z,"Perform the following commands to delete or modify an inbound NACL rule to restrict remote administration ports access to specific entities via AWS CLI:   
+**1.** To view the current NACL configuration:   
+```  
+aws ec2 describe-network-acls --network-acl-ids {{naclId}}  
+```  
+**2.** To modify an inbound rule, use the rule number from the previous output in the following command, and insert the wanted port range and IP CIDR:  
+```  
+aws ec2 replace-network-acl-entry --network-acl-id   --protocol tcp --rule-action allow --rule-number <ruleNumber> --ingress --cidr-block <ipCidr> --port-range From=<port>,To=<port>  
+```   
+**3.** To delete an unrestricted rule (allowed ingress connection of SSH\ RDP with 0.0.0.0/0) use the rule number from the previous output in the following command:  
+  
+```  
+aws ec2 delete-network-acl-entry --network-acl-id {{naclId}} --ingress --rule-number <ruleNumber>  
+```"
+acl-092a803dbb970adac,acl-092a803dbb970adac,CloudPlatform/Firewall,networkAcl,5.1 Ensure no Network ACLs allow ingress from 0.0.0.0/0 to remote server administration ports,FAIL,HIGH,Network ACL should restrict access over remote administration ports,2022-05-17T01:17:25Z,"Perform the following commands to delete or modify an inbound NACL rule to restrict remote administration ports access to specific entities via AWS CLI:   
+**1.** To view the current NACL configuration:   
+```  
+aws ec2 describe-network-acls --network-acl-ids {{naclId}}  
+```  
+**2.** To modify an inbound rule, use the rule number from the previous output in the following command, and insert the wanted port range and IP CIDR:  
+```  
+aws ec2 replace-network-acl-entry --network-acl-id   --protocol tcp --rule-action allow --rule-number <ruleNumber> --ingress --cidr-block <ipCidr> --port-range From=<port>,To=<port>  
+```   
+**3.** To delete an unrestricted rule (allowed ingress connection of SSH\ RDP with 0.0.0.0/0) use the rule number from the previous output in the following command:  
+  
+```  
+aws ec2 delete-network-acl-entry --network-acl-id {{naclId}} --ingress --rule-number <ruleNumber>  
+```"
+acl-a7c928ce,acl-a7c928ce,CloudPlatform/Firewall,networkAcl,5.1 Ensure no Network ACLs allow ingress from 0.0.0.0/0 to remote server administration ports,FAIL,HIGH,Network ACL should restrict access over remote administration ports,2022-05-17T01:17:16Z,"Perform the following commands to delete or modify an inbound NACL rule to restrict remote administration ports access to specific entities via AWS CLI:   
+**1.** To view the current NACL configuration:   
+```  
+aws ec2 describe-network-acls --network-acl-ids {{naclId}}  
+```  
+**2.** To modify an inbound rule, use the rule number from the previous output in the following command, and insert the wanted port range and IP CIDR:  
+```  
+aws ec2 replace-network-acl-entry --network-acl-id   --protocol tcp --rule-action allow --rule-number <ruleNumber> --ingress --cidr-block <ipCidr> --port-range From=<port>,To=<port>  
+```   
+**3.** To delete an unrestricted rule (allowed ingress connection of SSH\ RDP with 0.0.0.0/0) use the rule number from the previous output in the following command:  
+  
+```  
+aws ec2 delete-network-acl-entry --network-acl-id {{naclId}} --ingress --rule-number <ruleNumber>  
+```"
+acl-08320226271efae8a,acl-08320226271efae8a,CloudPlatform/Firewall,networkAcl,5.1 Ensure no Network ACLs allow ingress from 0.0.0.0/0 to remote server administration ports,FAIL,HIGH,Network ACL should restrict access over remote administration ports,2022-05-17T10:30:26Z,"Perform the following commands to delete or modify an inbound NACL rule to restrict remote administration ports access to specific entities via AWS CLI:   
+**1.** To view the current NACL configuration:   
+```  
+aws ec2 describe-network-acls --network-acl-ids {{naclId}}  
+```  
+**2.** To modify an inbound rule, use the rule number from the previous output in the following command, and insert the wanted port range and IP CIDR:  
+```  
+aws ec2 replace-network-acl-entry --network-acl-id   --protocol tcp --rule-action allow --rule-number <ruleNumber> --ingress --cidr-block <ipCidr> --port-range From=<port>,To=<port>  
+```   
+**3.** To delete an unrestricted rule (allowed ingress connection of SSH\ RDP with 0.0.0.0/0) use the rule number from the previous output in the following command:  
+  
+```  
+aws ec2 delete-network-acl-entry --network-acl-id {{naclId}} --ingress --rule-number <ruleNumber>  
+```"
+acl-00435b72fc5ab49b1,acl-00435b72fc5ab49b1,CloudPlatform/Firewall,networkAcl,5.1 Ensure no Network ACLs allow ingress from 0.0.0.0/0 to remote server administration ports,FAIL,HIGH,Network ACL should restrict access over remote administration ports,2022-05-17T10:30:26Z,"Perform the following commands to delete or modify an inbound NACL rule to restrict remote administration ports access to specific entities via AWS CLI:   
+**1.** To view the current NACL configuration:   
+```  
+aws ec2 describe-network-acls --network-acl-ids {{naclId}}  
+```  
+**2.** To modify an inbound rule, use the rule number from the previous output in the following command, and insert the wanted port range and IP CIDR:  
+```  
+aws ec2 replace-network-acl-entry --network-acl-id   --protocol tcp --rule-action allow --rule-number <ruleNumber> --ingress --cidr-block <ipCidr> --port-range From=<port>,To=<port>  
+```   
+**3.** To delete an unrestricted rule (allowed ingress connection of SSH\ RDP with 0.0.0.0/0) use the rule number from the previous output in the following command:  
+  
+```  
+aws ec2 delete-network-acl-entry --network-acl-id {{naclId}} --ingress --rule-number <ruleNumber>  
+```"
+acl-07f51b6e,acl-07f51b6e,CloudPlatform/Firewall,networkAcl,5.1 Ensure no Network ACLs allow ingress from 0.0.0.0/0 to remote server administration ports,FAIL,HIGH,Network ACL should restrict access over remote administration ports,2022-05-17T01:17:14Z,"Perform the following commands to delete or modify an inbound NACL rule to restrict remote administration ports access to specific entities via AWS CLI:   
+**1.** To view the current NACL configuration:   
+```  
+aws ec2 describe-network-acls --network-acl-ids {{naclId}}  
+```  
+**2.** To modify an inbound rule, use the rule number from the previous output in the following command, and insert the wanted port range and IP CIDR:  
+```  
+aws ec2 replace-network-acl-entry --network-acl-id   --protocol tcp --rule-action allow --rule-number <ruleNumber> --ingress --cidr-block <ipCidr> --port-range From=<port>,To=<port>  
+```   
+**3.** To delete an unrestricted rule (allowed ingress connection of SSH\ RDP with 0.0.0.0/0) use the rule number from the previous output in the following command:  
+  
+```  
+aws ec2 delete-network-acl-entry --network-acl-id {{naclId}} --ingress --rule-number <ruleNumber>  
+```"
+acl-034c55835a8566d61,acl-034c55835a8566d61,CloudPlatform/Firewall,networkAcl,5.1 Ensure no Network ACLs allow ingress from 0.0.0.0/0 to remote server administration ports,FAIL,HIGH,Network ACL should restrict access over remote administration ports,2022-05-17T10:31:16Z,"Perform the following commands to delete or modify an inbound NACL rule to restrict remote administration ports access to specific entities via AWS CLI:   
+**1.** To view the current NACL configuration:   
+```  
+aws ec2 describe-network-acls --network-acl-ids {{naclId}}  
+```  
+**2.** To modify an inbound rule, use the rule number from the previous output in the following command, and insert the wanted port range and IP CIDR:  
+```  
+aws ec2 replace-network-acl-entry --network-acl-id   --protocol tcp --rule-action allow --rule-number <ruleNumber> --ingress --cidr-block <ipCidr> --port-range From=<port>,To=<port>  
+```   
+**3.** To delete an unrestricted rule (allowed ingress connection of SSH\ RDP with 0.0.0.0/0) use the rule number from the previous output in the following command:  
+  
+```  
+aws ec2 delete-network-acl-entry --network-acl-id {{naclId}} --ingress --rule-number <ruleNumber>  
+```"
+acl-a570f7ce,acl-a570f7ce,CloudPlatform/Firewall,networkAcl,5.1 Ensure no Network ACLs allow ingress from 0.0.0.0/0 to remote server administration ports,FAIL,HIGH,Network ACL should restrict access over remote administration ports,2022-05-17T10:30:23Z,"Perform the following commands to delete or modify an inbound NACL rule to restrict remote administration ports access to specific entities via AWS CLI:   
+**1.** To view the current NACL configuration:   
+```  
+aws ec2 describe-network-acls --network-acl-ids {{naclId}}  
+```  
+**2.** To modify an inbound rule, use the rule number from the previous output in the following command, and insert the wanted port range and IP CIDR:  
+```  
+aws ec2 replace-network-acl-entry --network-acl-id   --protocol tcp --rule-action allow --rule-number <ruleNumber> --ingress --cidr-block <ipCidr> --port-range From=<port>,To=<port>  
+```   
+**3.** To delete an unrestricted rule (allowed ingress connection of SSH\ RDP with 0.0.0.0/0) use the rule number from the previous output in the following command:  
+  
+```  
+aws ec2 delete-network-acl-entry --network-acl-id {{naclId}} --ingress --rule-number <ruleNumber>  
+```"
+acl-c12adda8,acl-c12adda8,CloudPlatform/Firewall,networkAcl,5.1 Ensure no Network ACLs allow ingress from 0.0.0.0/0 to remote server administration ports,FAIL,HIGH,Network ACL should restrict access over remote administration ports,2022-05-17T01:17:12Z,"Perform the following commands to delete or modify an inbound NACL rule to restrict remote administration ports access to specific entities via AWS CLI:   
+**1.** To view the current NACL configuration:   
+```  
+aws ec2 describe-network-acls --network-acl-ids {{naclId}}  
+```  
+**2.** To modify an inbound rule, use the rule number from the previous output in the following command, and insert the wanted port range and IP CIDR:  
+```  
+aws ec2 replace-network-acl-entry --network-acl-id   --protocol tcp --rule-action allow --rule-number <ruleNumber> --ingress --cidr-block <ipCidr> --port-range From=<port>,To=<port>  
+```   
+**3.** To delete an unrestricted rule (allowed ingress connection of SSH\ RDP with 0.0.0.0/0) use the rule number from the previous output in the following command:  
+  
+```  
+aws ec2 delete-network-acl-entry --network-acl-id {{naclId}} --ingress --rule-number <ruleNumber>  
+```"
+acl-07d6eb9e0cdf4de78,acl-07d6eb9e0cdf4de78,CloudPlatform/Firewall,networkAcl,5.1 Ensure no Network ACLs allow ingress from 0.0.0.0/0 to remote server administration ports,FAIL,HIGH,Network ACL should restrict access over remote administration ports,2022-05-17T10:30:26Z,"Perform the following commands to delete or modify an inbound NACL rule to restrict remote administration ports access to specific entities via AWS CLI:   
+**1.** To view the current NACL configuration:   
+```  
+aws ec2 describe-network-acls --network-acl-ids {{naclId}}  
+```  
+**2.** To modify an inbound rule, use the rule number from the previous output in the following command, and insert the wanted port range and IP CIDR:  
+```  
+aws ec2 replace-network-acl-entry --network-acl-id   --protocol tcp --rule-action allow --rule-number <ruleNumber> --ingress --cidr-block <ipCidr> --port-range From=<port>,To=<port>  
+```   
+**3.** To delete an unrestricted rule (allowed ingress connection of SSH\ RDP with 0.0.0.0/0) use the rule number from the previous output in the following command:  
+  
+```  
+aws ec2 delete-network-acl-entry --network-acl-id {{naclId}} --ingress --rule-number <ruleNumber>  
+```"
+acl-3922f450,acl-3922f450,CloudPlatform/Firewall,networkAcl,5.1 Ensure no Network ACLs allow ingress from 0.0.0.0/0 to remote server administration ports,FAIL,HIGH,Network ACL should restrict access over remote administration ports,2022-05-17T10:30:22Z,"Perform the following commands to delete or modify an inbound NACL rule to restrict remote administration ports access to specific entities via AWS CLI:   
+**1.** To view the current NACL configuration:   
+```  
+aws ec2 describe-network-acls --network-acl-ids {{naclId}}  
+```  
+**2.** To modify an inbound rule, use the rule number from the previous output in the following command, and insert the wanted port range and IP CIDR:  
+```  
+aws ec2 replace-network-acl-entry --network-acl-id   --protocol tcp --rule-action allow --rule-number <ruleNumber> --ingress --cidr-block <ipCidr> --port-range From=<port>,To=<port>  
+```   
+**3.** To delete an unrestricted rule (allowed ingress connection of SSH\ RDP with 0.0.0.0/0) use the rule number from the previous output in the following command:  
+  
+```  
+aws ec2 delete-network-acl-entry --network-acl-id {{naclId}} --ingress --rule-number <ruleNumber>  
+```"
+acl-0ac4a11c28db2dce8,acl-0ac4a11c28db2dce8,CloudPlatform/Firewall,networkAcl,5.1 Ensure no Network ACLs allow ingress from 0.0.0.0/0 to remote server administration ports,FAIL,HIGH,Network ACL should restrict access over remote administration ports,2022-05-17T10:31:18Z,"Perform the following commands to delete or modify an inbound NACL rule to restrict remote administration ports access to specific entities via AWS CLI:   
+**1.** To view the current NACL configuration:   
+```  
+aws ec2 describe-network-acls --network-acl-ids {{naclId}}  
+```  
+**2.** To modify an inbound rule, use the rule number from the previous output in the following command, and insert the wanted port range and IP CIDR:  
+```  
+aws ec2 replace-network-acl-entry --network-acl-id   --protocol tcp --rule-action allow --rule-number <ruleNumber> --ingress --cidr-block <ipCidr> --port-range From=<port>,To=<port>  
+```   
+**3.** To delete an unrestricted rule (allowed ingress connection of SSH\ RDP with 0.0.0.0/0) use the rule number from the previous output in the following command:  
+  
+```  
+aws ec2 delete-network-acl-entry --network-acl-id {{naclId}} --ingress --rule-number <ruleNumber>  
+```"
+acl-0e3366c31d0a28b2c,acl-0e3366c31d0a28b2c,CloudPlatform/Firewall,networkAcl,5.1 Ensure no Network ACLs allow ingress from 0.0.0.0/0 to remote server administration ports,FAIL,HIGH,Network ACL should restrict access over remote administration ports,2022-05-17T10:31:18Z,"Perform the following commands to delete or modify an inbound NACL rule to restrict remote administration ports access to specific entities via AWS CLI:   
+**1.** To view the current NACL configuration:   
+```  
+aws ec2 describe-network-acls --network-acl-ids {{naclId}}  
+```  
+**2.** To modify an inbound rule, use the rule number from the previous output in the following command, and insert the wanted port range and IP CIDR:  
+```  
+aws ec2 replace-network-acl-entry --network-acl-id   --protocol tcp --rule-action allow --rule-number <ruleNumber> --ingress --cidr-block <ipCidr> --port-range From=<port>,To=<port>  
+```   
+**3.** To delete an unrestricted rule (allowed ingress connection of SSH\ RDP with 0.0.0.0/0) use the rule number from the previous output in the following command:  
+  
+```  
+aws ec2 delete-network-acl-entry --network-acl-id {{naclId}} --ingress --rule-number <ruleNumber>  
+```"
+acl-6177b01a,acl-6177b01a,CloudPlatform/Firewall,networkAcl,5.1 Ensure no Network ACLs allow ingress from 0.0.0.0/0 to remote server administration ports,FAIL,HIGH,Network ACL should restrict access over remote administration ports,2022-05-17T10:28:03Z,"Perform the following commands to delete or modify an inbound NACL rule to restrict remote administration ports access to specific entities via AWS CLI:   
+**1.** To view the current NACL configuration:   
+```  
+aws ec2 describe-network-acls --network-acl-ids {{naclId}}  
+```  
+**2.** To modify an inbound rule, use the rule number from the previous output in the following command, and insert the wanted port range and IP CIDR:  
+```  
+aws ec2 replace-network-acl-entry --network-acl-id   --protocol tcp --rule-action allow --rule-number <ruleNumber> --ingress --cidr-block <ipCidr> --port-range From=<port>,To=<port>  
+```   
+**3.** To delete an unrestricted rule (allowed ingress connection of SSH\ RDP with 0.0.0.0/0) use the rule number from the previous output in the following command:  
+  
+```  
+aws ec2 delete-network-acl-entry --network-acl-id {{naclId}} --ingress --rule-number <ruleNumber>  
+```"
+acl-721be917,acl-721be917,CloudPlatform/Firewall,networkAcl,5.1 Ensure no Network ACLs allow ingress from 0.0.0.0/0 to remote server administration ports,FAIL,HIGH,Network ACL should restrict access over remote administration ports,2022-05-17T01:17:15Z,"Perform the following commands to delete or modify an inbound NACL rule to restrict remote administration ports access to specific entities via AWS CLI:   
+**1.** To view the current NACL configuration:   
+```  
+aws ec2 describe-network-acls --network-acl-ids {{naclId}}  
+```  
+**2.** To modify an inbound rule, use the rule number from the previous output in the following command, and insert the wanted port range and IP CIDR:  
+```  
+aws ec2 replace-network-acl-entry --network-acl-id   --protocol tcp --rule-action allow --rule-number <ruleNumber> --ingress --cidr-block <ipCidr> --port-range From=<port>,To=<port>  
+```   
+**3.** To delete an unrestricted rule (allowed ingress connection of SSH\ RDP with 0.0.0.0/0) use the rule number from the previous output in the following command:  
+  
+```  
+aws ec2 delete-network-acl-entry --network-acl-id {{naclId}} --ingress --rule-number <ruleNumber>  
+```"
+acl-fc43229a,acl-fc43229a,CloudPlatform/Firewall,networkAcl,5.1 Ensure no Network ACLs allow ingress from 0.0.0.0/0 to remote server administration ports,FAIL,HIGH,Network ACL should restrict access over remote administration ports,2022-05-17T01:19:53Z,"Perform the following commands to delete or modify an inbound NACL rule to restrict remote administration ports access to specific entities via AWS CLI:   
+**1.** To view the current NACL configuration:   
+```  
+aws ec2 describe-network-acls --network-acl-ids {{naclId}}  
+```  
+**2.** To modify an inbound rule, use the rule number from the previous output in the following command, and insert the wanted port range and IP CIDR:  
+```  
+aws ec2 replace-network-acl-entry --network-acl-id   --protocol tcp --rule-action allow --rule-number <ruleNumber> --ingress --cidr-block <ipCidr> --port-range From=<port>,To=<port>  
+```   
+**3.** To delete an unrestricted rule (allowed ingress connection of SSH\ RDP with 0.0.0.0/0) use the rule number from the previous output in the following command:  
+  
+```  
+aws ec2 delete-network-acl-entry --network-acl-id {{naclId}} --ingress --rule-number <ruleNumber>  
+```"
+acl-f0977098,acl-f0977098,CloudPlatform/Firewall,networkAcl,5.1 Ensure no Network ACLs allow ingress from 0.0.0.0/0 to remote server administration ports,FAIL,HIGH,Network ACL should restrict access over remote administration ports,2022-05-17T01:15:46Z,"Perform the following commands to delete or modify an inbound NACL rule to restrict remote administration ports access to specific entities via AWS CLI:   
+**1.** To view the current NACL configuration:   
+```  
+aws ec2 describe-network-acls --network-acl-ids {{naclId}}  
+```  
+**2.** To modify an inbound rule, use the rule number from the previous output in the following command, and insert the wanted port range and IP CIDR:  
+```  
+aws ec2 replace-network-acl-entry --network-acl-id   --protocol tcp --rule-action allow --rule-number <ruleNumber> --ingress --cidr-block <ipCidr> --port-range From=<port>,To=<port>  
+```   
+**3.** To delete an unrestricted rule (allowed ingress connection of SSH\ RDP with 0.0.0.0/0) use the rule number from the previous output in the following command:  
+  
+```  
+aws ec2 delete-network-acl-entry --network-acl-id {{naclId}} --ingress --rule-number <ruleNumber>  
+```"
+acl-00b500570e6760f35,acl-00b500570e6760f35,CloudPlatform/Firewall,networkAcl,5.1 Ensure no Network ACLs allow ingress from 0.0.0.0/0 to remote server administration ports,FAIL,HIGH,Network ACL should restrict access over remote administration ports,2022-05-17T01:17:25Z,"Perform the following commands to delete or modify an inbound NACL rule to restrict remote administration ports access to specific entities via AWS CLI:   
+**1.** To view the current NACL configuration:   
+```  
+aws ec2 describe-network-acls --network-acl-ids {{naclId}}  
+```  
+**2.** To modify an inbound rule, use the rule number from the previous output in the following command, and insert the wanted port range and IP CIDR:  
+```  
+aws ec2 replace-network-acl-entry --network-acl-id   --protocol tcp --rule-action allow --rule-number <ruleNumber> --ingress --cidr-block <ipCidr> --port-range From=<port>,To=<port>  
+```   
+**3.** To delete an unrestricted rule (allowed ingress connection of SSH\ RDP with 0.0.0.0/0) use the rule number from the previous output in the following command:  
+  
+```  
+aws ec2 delete-network-acl-entry --network-acl-id {{naclId}} --ingress --rule-number <ruleNumber>  
+```"
+acl-254a4e4d,acl-254a4e4d,CloudPlatform/Firewall,networkAcl,5.1 Ensure no Network ACLs allow ingress from 0.0.0.0/0 to remote server administration ports,FAIL,HIGH,Network ACL should restrict access over remote administration ports,2022-05-17T01:19:50Z,"Perform the following commands to delete or modify an inbound NACL rule to restrict remote administration ports access to specific entities via AWS CLI:   
+**1.** To view the current NACL configuration:   
+```  
+aws ec2 describe-network-acls --network-acl-ids {{naclId}}  
+```  
+**2.** To modify an inbound rule, use the rule number from the previous output in the following command, and insert the wanted port range and IP CIDR:  
+```  
+aws ec2 replace-network-acl-entry --network-acl-id   --protocol tcp --rule-action allow --rule-number <ruleNumber> --ingress --cidr-block <ipCidr> --port-range From=<port>,To=<port>  
+```   
+**3.** To delete an unrestricted rule (allowed ingress connection of SSH\ RDP with 0.0.0.0/0) use the rule number from the previous output in the following command:  
+  
+```  
+aws ec2 delete-network-acl-entry --network-acl-id {{naclId}} --ingress --rule-number <ruleNumber>  
+```"
+acl-922143f8,acl-922143f8,CloudPlatform/Firewall,networkAcl,5.1 Ensure no Network ACLs allow ingress from 0.0.0.0/0 to remote server administration ports,FAIL,HIGH,Network ACL should restrict access over remote administration ports,2022-05-17T10:28:04Z,"Perform the following commands to delete or modify an inbound NACL rule to restrict remote administration ports access to specific entities via AWS CLI:   
+**1.** To view the current NACL configuration:   
+```  
+aws ec2 describe-network-acls --network-acl-ids {{naclId}}  
+```  
+**2.** To modify an inbound rule, use the rule number from the previous output in the following command, and insert the wanted port range and IP CIDR:  
+```  
+aws ec2 replace-network-acl-entry --network-acl-id   --protocol tcp --rule-action allow --rule-number <ruleNumber> --ingress --cidr-block <ipCidr> --port-range From=<port>,To=<port>  
+```   
+**3.** To delete an unrestricted rule (allowed ingress connection of SSH\ RDP with 0.0.0.0/0) use the rule number from the previous output in the following command:  
+  
+```  
+aws ec2 delete-network-acl-entry --network-acl-id {{naclId}} --ingress --rule-number <ruleNumber>  
+```"
+acl-a9fa69cf,acl-a9fa69cf,CloudPlatform/Firewall,networkAcl,5.1 Ensure no Network ACLs allow ingress from 0.0.0.0/0 to remote server administration ports,FAIL,HIGH,Network ACL should restrict access over remote administration ports,2022-05-17T01:17:19Z,"Perform the following commands to delete or modify an inbound NACL rule to restrict remote administration ports access to specific entities via AWS CLI:   
+**1.** To view the current NACL configuration:   
+```  
+aws ec2 describe-network-acls --network-acl-ids {{naclId}}  
+```  
+**2.** To modify an inbound rule, use the rule number from the previous output in the following command, and insert the wanted port range and IP CIDR:  
+```  
+aws ec2 replace-network-acl-entry --network-acl-id   --protocol tcp --rule-action allow --rule-number <ruleNumber> --ingress --cidr-block <ipCidr> --port-range From=<port>,To=<port>  
+```   
+**3.** To delete an unrestricted rule (allowed ingress connection of SSH\ RDP with 0.0.0.0/0) use the rule number from the previous output in the following command:  
+  
+```  
+aws ec2 delete-network-acl-entry --network-acl-id {{naclId}} --ingress --rule-number <ruleNumber>  
+```"
+acl-03f60800252c4d16f,acl-03f60800252c4d16f,CloudPlatform/Firewall,networkAcl,5.1 Ensure no Network ACLs allow ingress from 0.0.0.0/0 to remote server administration ports,FAIL,HIGH,Network ACL should restrict access over remote administration ports,2022-05-17T01:15:50Z,"Perform the following commands to delete or modify an inbound NACL rule to restrict remote administration ports access to specific entities via AWS CLI:   
+**1.** To view the current NACL configuration:   
+```  
+aws ec2 describe-network-acls --network-acl-ids {{naclId}}  
+```  
+**2.** To modify an inbound rule, use the rule number from the previous output in the following command, and insert the wanted port range and IP CIDR:  
+```  
+aws ec2 replace-network-acl-entry --network-acl-id   --protocol tcp --rule-action allow --rule-number <ruleNumber> --ingress --cidr-block <ipCidr> --port-range From=<port>,To=<port>  
+```   
+**3.** To delete an unrestricted rule (allowed ingress connection of SSH\ RDP with 0.0.0.0/0) use the rule number from the previous output in the following command:  
+  
+```  
+aws ec2 delete-network-acl-entry --network-acl-id {{naclId}} --ingress --rule-number <ruleNumber>  
+```"
+acl-85d5bbfc,acl-85d5bbfc,CloudPlatform/Firewall,networkAcl,5.1 Ensure no Network ACLs allow ingress from 0.0.0.0/0 to remote server administration ports,FAIL,HIGH,Network ACL should restrict access over remote administration ports,2022-05-17T10:28:04Z,"Perform the following commands to delete or modify an inbound NACL rule to restrict remote administration ports access to specific entities via AWS CLI:   
+**1.** To view the current NACL configuration:   
+```  
+aws ec2 describe-network-acls --network-acl-ids {{naclId}}  
+```  
+**2.** To modify an inbound rule, use the rule number from the previous output in the following command, and insert the wanted port range and IP CIDR:  
+```  
+aws ec2 replace-network-acl-entry --network-acl-id   --protocol tcp --rule-action allow --rule-number <ruleNumber> --ingress --cidr-block <ipCidr> --port-range From=<port>,To=<port>  
+```   
+**3.** To delete an unrestricted rule (allowed ingress connection of SSH\ RDP with 0.0.0.0/0) use the rule number from the previous output in the following command:  
+  
+```  
+aws ec2 delete-network-acl-entry --network-acl-id {{naclId}} --ingress --rule-number <ruleNumber>  
+```"
+acl-4c1e4d35,acl-4c1e4d35,CloudPlatform/Firewall,networkAcl,5.1 Ensure no Network ACLs allow ingress from 0.0.0.0/0 to remote server administration ports,FAIL,HIGH,Network ACL should restrict access over remote administration ports,2022-05-17T01:19:50Z,"Perform the following commands to delete or modify an inbound NACL rule to restrict remote administration ports access to specific entities via AWS CLI:   
+**1.** To view the current NACL configuration:   
+```  
+aws ec2 describe-network-acls --network-acl-ids {{naclId}}  
+```  
+**2.** To modify an inbound rule, use the rule number from the previous output in the following command, and insert the wanted port range and IP CIDR:  
+```  
+aws ec2 replace-network-acl-entry --network-acl-id   --protocol tcp --rule-action allow --rule-number <ruleNumber> --ingress --cidr-block <ipCidr> --port-range From=<port>,To=<port>  
+```   
+**3.** To delete an unrestricted rule (allowed ingress connection of SSH\ RDP with 0.0.0.0/0) use the rule number from the previous output in the following command:  
+  
+```  
+aws ec2 delete-network-acl-entry --network-acl-id {{naclId}} --ingress --rule-number <ruleNumber>  
+```"
+acl-ce343aa6,acl-ce343aa6,CloudPlatform/Firewall,networkAcl,5.1 Ensure no Network ACLs allow ingress from 0.0.0.0/0 to remote server administration ports,FAIL,HIGH,Network ACL should restrict access over remote administration ports,2022-05-17T01:19:49Z,"Perform the following commands to delete or modify an inbound NACL rule to restrict remote administration ports access to specific entities via AWS CLI:   
+**1.** To view the current NACL configuration:   
+```  
+aws ec2 describe-network-acls --network-acl-ids {{naclId}}  
+```  
+**2.** To modify an inbound rule, use the rule number from the previous output in the following command, and insert the wanted port range and IP CIDR:  
+```  
+aws ec2 replace-network-acl-entry --network-acl-id   --protocol tcp --rule-action allow --rule-number <ruleNumber> --ingress --cidr-block <ipCidr> --port-range From=<port>,To=<port>  
+```   
+**3.** To delete an unrestricted rule (allowed ingress connection of SSH\ RDP with 0.0.0.0/0) use the rule number from the previous output in the following command:  
+  
+```  
+aws ec2 delete-network-acl-entry --network-acl-id {{naclId}} --ingress --rule-number <ruleNumber>  
+```"
+acl-082f8dea67fcfcfd6,acl-082f8dea67fcfcfd6,CloudPlatform/Firewall,networkAcl,5.1 Ensure no Network ACLs allow ingress from 0.0.0.0/0 to remote server administration ports,FAIL,HIGH,Network ACL should restrict access over remote administration ports,2022-05-17T10:31:15Z,"Perform the following commands to delete or modify an inbound NACL rule to restrict remote administration ports access to specific entities via AWS CLI:   
+**1.** To view the current NACL configuration:   
+```  
+aws ec2 describe-network-acls --network-acl-ids {{naclId}}  
+```  
+**2.** To modify an inbound rule, use the rule number from the previous output in the following command, and insert the wanted port range and IP CIDR:  
+```  
+aws ec2 replace-network-acl-entry --network-acl-id   --protocol tcp --rule-action allow --rule-number <ruleNumber> --ingress --cidr-block <ipCidr> --port-range From=<port>,To=<port>  
+```   
+**3.** To delete an unrestricted rule (allowed ingress connection of SSH\ RDP with 0.0.0.0/0) use the rule number from the previous output in the following command:  
+  
+```  
+aws ec2 delete-network-acl-entry --network-acl-id {{naclId}} --ingress --rule-number <ruleNumber>  
+```"
+acl-01fc5131f9d873929,acl-01fc5131f9d873929,CloudPlatform/Firewall,networkAcl,5.1 Ensure no Network ACLs allow ingress from 0.0.0.0/0 to remote server administration ports,FAIL,HIGH,Network ACL should restrict access over remote administration ports,2022-05-17T01:15:50Z,"Perform the following commands to delete or modify an inbound NACL rule to restrict remote administration ports access to specific entities via AWS CLI:   
+**1.** To view the current NACL configuration:   
+```  
+aws ec2 describe-network-acls --network-acl-ids {{naclId}}  
+```  
+**2.** To modify an inbound rule, use the rule number from the previous output in the following command, and insert the wanted port range and IP CIDR:  
+```  
+aws ec2 replace-network-acl-entry --network-acl-id   --protocol tcp --rule-action allow --rule-number <ruleNumber> --ingress --cidr-block <ipCidr> --port-range From=<port>,To=<port>  
+```   
+**3.** To delete an unrestricted rule (allowed ingress connection of SSH\ RDP with 0.0.0.0/0) use the rule number from the previous output in the following command:  
+  
+```  
+aws ec2 delete-network-acl-entry --network-acl-id {{naclId}} --ingress --rule-number <ruleNumber>  
+```"
+acl-03224fd66dc68a55a,acl-03224fd66dc68a55a,CloudPlatform/Firewall,networkAcl,5.1 Ensure no Network ACLs allow ingress from 0.0.0.0/0 to remote server administration ports,FAIL,HIGH,Network ACL should restrict access over remote administration ports,2022-05-17T10:30:27Z,"Perform the following commands to delete or modify an inbound NACL rule to restrict remote administration ports access to specific entities via AWS CLI:   
+**1.** To view the current NACL configuration:   
+```  
+aws ec2 describe-network-acls --network-acl-ids {{naclId}}  
+```  
+**2.** To modify an inbound rule, use the rule number from the previous output in the following command, and insert the wanted port range and IP CIDR:  
+```  
+aws ec2 replace-network-acl-entry --network-acl-id   --protocol tcp --rule-action allow --rule-number <ruleNumber> --ingress --cidr-block <ipCidr> --port-range From=<port>,To=<port>  
+```   
+**3.** To delete an unrestricted rule (allowed ingress connection of SSH\ RDP with 0.0.0.0/0) use the rule number from the previous output in the following command:  
+  
+```  
+aws ec2 delete-network-acl-entry --network-acl-id {{naclId}} --ingress --rule-number <ruleNumber>  
+```"
+acl-7e858506,acl-7e858506,CloudPlatform/Firewall,networkAcl,5.1 Ensure no Network ACLs allow ingress from 0.0.0.0/0 to remote server administration ports,FAIL,HIGH,Network ACL should restrict access over remote administration ports,2022-05-17T01:17:25Z,"Perform the following commands to delete or modify an inbound NACL rule to restrict remote administration ports access to specific entities via AWS CLI:   
+**1.** To view the current NACL configuration:   
+```  
+aws ec2 describe-network-acls --network-acl-ids {{naclId}}  
+```  
+**2.** To modify an inbound rule, use the rule number from the previous output in the following command, and insert the wanted port range and IP CIDR:  
+```  
+aws ec2 replace-network-acl-entry --network-acl-id   --protocol tcp --rule-action allow --rule-number <ruleNumber> --ingress --cidr-block <ipCidr> --port-range From=<port>,To=<port>  
+```   
+**3.** To delete an unrestricted rule (allowed ingress connection of SSH\ RDP with 0.0.0.0/0) use the rule number from the previous output in the following command:  
+  
+```  
+aws ec2 delete-network-acl-entry --network-acl-id {{naclId}} --ingress --rule-number <ruleNumber>  
+```"
+acl-0aeb9d229ffa46926,acl-0aeb9d229ffa46926,CloudPlatform/Firewall,networkAcl,5.1 Ensure no Network ACLs allow ingress from 0.0.0.0/0 to remote server administration ports,FAIL,HIGH,Network ACL should restrict access over remote administration ports,2022-05-17T10:31:16Z,"Perform the following commands to delete or modify an inbound NACL rule to restrict remote administration ports access to specific entities via AWS CLI:   
+**1.** To view the current NACL configuration:   
+```  
+aws ec2 describe-network-acls --network-acl-ids {{naclId}}  
+```  
+**2.** To modify an inbound rule, use the rule number from the previous output in the following command, and insert the wanted port range and IP CIDR:  
+```  
+aws ec2 replace-network-acl-entry --network-acl-id   --protocol tcp --rule-action allow --rule-number <ruleNumber> --ingress --cidr-block <ipCidr> --port-range From=<port>,To=<port>  
+```   
+**3.** To delete an unrestricted rule (allowed ingress connection of SSH\ RDP with 0.0.0.0/0) use the rule number from the previous output in the following command:  
+  
+```  
+aws ec2 delete-network-acl-entry --network-acl-id {{naclId}} --ingress --rule-number <ruleNumber>  
+```"
+acl-914dccf7,acl-914dccf7,CloudPlatform/Firewall,networkAcl,5.1 Ensure no Network ACLs allow ingress from 0.0.0.0/0 to remote server administration ports,FAIL,HIGH,Network ACL should restrict access over remote administration ports,2022-05-17T10:28:06Z,"Perform the following commands to delete or modify an inbound NACL rule to restrict remote administration ports access to specific entities via AWS CLI:   
+**1.** To view the current NACL configuration:   
+```  
+aws ec2 describe-network-acls --network-acl-ids {{naclId}}  
+```  
+**2.** To modify an inbound rule, use the rule number from the previous output in the following command, and insert the wanted port range and IP CIDR:  
+```  
+aws ec2 replace-network-acl-entry --network-acl-id   --protocol tcp --rule-action allow --rule-number <ruleNumber> --ingress --cidr-block <ipCidr> --port-range From=<port>,To=<port>  
+```   
+**3.** To delete an unrestricted rule (allowed ingress connection of SSH\ RDP with 0.0.0.0/0) use the rule number from the previous output in the following command:  
+  
+```  
+aws ec2 delete-network-acl-entry --network-acl-id {{naclId}} --ingress --rule-number <ruleNumber>  
+```"
+acl-3db79955,acl-3db79955,CloudPlatform/Firewall,networkAcl,5.1 Ensure no Network ACLs allow ingress from 0.0.0.0/0 to remote server administration ports,FAIL,HIGH,Network ACL should restrict access over remote administration ports,2022-05-17T01:15:44Z,"Perform the following commands to delete or modify an inbound NACL rule to restrict remote administration ports access to specific entities via AWS CLI:   
+**1.** To view the current NACL configuration:   
+```  
+aws ec2 describe-network-acls --network-acl-ids {{naclId}}  
+```  
+**2.** To modify an inbound rule, use the rule number from the previous output in the following command, and insert the wanted port range and IP CIDR:  
+```  
+aws ec2 replace-network-acl-entry --network-acl-id   --protocol tcp --rule-action allow --rule-number <ruleNumber> --ingress --cidr-block <ipCidr> --port-range From=<port>,To=<port>  
+```   
+**3.** To delete an unrestricted rule (allowed ingress connection of SSH\ RDP with 0.0.0.0/0) use the rule number from the previous output in the following command:  
+  
+```  
+aws ec2 delete-network-acl-entry --network-acl-id {{naclId}} --ingress --rule-number <ruleNumber>  
+```"
+acl-02d83b6b,acl-02d83b6b,CloudPlatform/Firewall,networkAcl,5.1 Ensure no Network ACLs allow ingress from 0.0.0.0/0 to remote server administration ports,FAIL,HIGH,Network ACL should restrict access over remote administration ports,2022-05-17T01:17:14Z,"Perform the following commands to delete or modify an inbound NACL rule to restrict remote administration ports access to specific entities via AWS CLI:   
+**1.** To view the current NACL configuration:   
+```  
+aws ec2 describe-network-acls --network-acl-ids {{naclId}}  
+```  
+**2.** To modify an inbound rule, use the rule number from the previous output in the following command, and insert the wanted port range and IP CIDR:  
+```  
+aws ec2 replace-network-acl-entry --network-acl-id   --protocol tcp --rule-action allow --rule-number <ruleNumber> --ingress --cidr-block <ipCidr> --port-range From=<port>,To=<port>  
+```   
+**3.** To delete an unrestricted rule (allowed ingress connection of SSH\ RDP with 0.0.0.0/0) use the rule number from the previous output in the following command:  
+  
+```  
+aws ec2 delete-network-acl-entry --network-acl-id {{naclId}} --ingress --rule-number <ruleNumber>  
+```"
+acl-6bd1f003,acl-6bd1f003,CloudPlatform/Firewall,networkAcl,5.1 Ensure no Network ACLs allow ingress from 0.0.0.0/0 to remote server administration ports,FAIL,HIGH,Network ACL should restrict access over remote administration ports,2022-05-17T10:28:04Z,"Perform the following commands to delete or modify an inbound NACL rule to restrict remote administration ports access to specific entities via AWS CLI:   
+**1.** To view the current NACL configuration:   
+```  
+aws ec2 describe-network-acls --network-acl-ids {{naclId}}  
+```  
+**2.** To modify an inbound rule, use the rule number from the previous output in the following command, and insert the wanted port range and IP CIDR:  
+```  
+aws ec2 replace-network-acl-entry --network-acl-id   --protocol tcp --rule-action allow --rule-number <ruleNumber> --ingress --cidr-block <ipCidr> --port-range From=<port>,To=<port>  
+```   
+**3.** To delete an unrestricted rule (allowed ingress connection of SSH\ RDP with 0.0.0.0/0) use the rule number from the previous output in the following command:  
+  
+```  
+aws ec2 delete-network-acl-entry --network-acl-id {{naclId}} --ingress --rule-number <ruleNumber>  
+```"
+acl-09d93772,acl-09d93772,CloudPlatform/Firewall,networkAcl,5.1 Ensure no Network ACLs allow ingress from 0.0.0.0/0 to remote server administration ports,FAIL,HIGH,Network ACL should restrict access over remote administration ports,2022-05-17T10:30:21Z,"Perform the following commands to delete or modify an inbound NACL rule to restrict remote administration ports access to specific entities via AWS CLI:   
+**1.** To view the current NACL configuration:   
+```  
+aws ec2 describe-network-acls --network-acl-ids {{naclId}}  
+```  
+**2.** To modify an inbound rule, use the rule number from the previous output in the following command, and insert the wanted port range and IP CIDR:  
+```  
+aws ec2 replace-network-acl-entry --network-acl-id   --protocol tcp --rule-action allow --rule-number <ruleNumber> --ingress --cidr-block <ipCidr> --port-range From=<port>,To=<port>  
+```   
+**3.** To delete an unrestricted rule (allowed ingress connection of SSH\ RDP with 0.0.0.0/0) use the rule number from the previous output in the following command:  
+  
+```  
+aws ec2 delete-network-acl-entry --network-acl-id {{naclId}} --ingress --rule-number <ruleNumber>  
+```"
+acl-70292417,acl-70292417,CloudPlatform/Firewall,networkAcl,5.1 Ensure no Network ACLs allow ingress from 0.0.0.0/0 to remote server administration ports,FAIL,HIGH,Network ACL should restrict access over remote administration ports,2022-05-17T01:15:47Z,"Perform the following commands to delete or modify an inbound NACL rule to restrict remote administration ports access to specific entities via AWS CLI:   
+**1.** To view the current NACL configuration:   
+```  
+aws ec2 describe-network-acls --network-acl-ids {{naclId}}  
+```  
+**2.** To modify an inbound rule, use the rule number from the previous output in the following command, and insert the wanted port range and IP CIDR:  
+```  
+aws ec2 replace-network-acl-entry --network-acl-id   --protocol tcp --rule-action allow --rule-number <ruleNumber> --ingress --cidr-block <ipCidr> --port-range From=<port>,To=<port>  
+```   
+**3.** To delete an unrestricted rule (allowed ingress connection of SSH\ RDP with 0.0.0.0/0) use the rule number from the previous output in the following command:  
+  
+```  
+aws ec2 delete-network-acl-entry --network-acl-id {{naclId}} --ingress --rule-number <ruleNumber>  
+```"
+acl-80b963e9,acl-80b963e9,CloudPlatform/Firewall,networkAcl,5.1 Ensure no Network ACLs allow ingress from 0.0.0.0/0 to remote server administration ports,FAIL,HIGH,Network ACL should restrict access over remote administration ports,2022-05-17T10:28:05Z,"Perform the following commands to delete or modify an inbound NACL rule to restrict remote administration ports access to specific entities via AWS CLI:   
+**1.** To view the current NACL configuration:   
+```  
+aws ec2 describe-network-acls --network-acl-ids {{naclId}}  
+```  
+**2.** To modify an inbound rule, use the rule number from the previous output in the following command, and insert the wanted port range and IP CIDR:  
+```  
+aws ec2 replace-network-acl-entry --network-acl-id   --protocol tcp --rule-action allow --rule-number <ruleNumber> --ingress --cidr-block <ipCidr> --port-range From=<port>,To=<port>  
+```   
+**3.** To delete an unrestricted rule (allowed ingress connection of SSH\ RDP with 0.0.0.0/0) use the rule number from the previous output in the following command:  
+  
+```  
+aws ec2 delete-network-acl-entry --network-acl-id {{naclId}} --ingress --rule-number <ruleNumber>  
+```"
+acl-0475d283eaa04f606,acl-0475d283eaa04f606,CloudPlatform/Firewall,networkAcl,5.1 Ensure no Network ACLs allow ingress from 0.0.0.0/0 to remote server administration ports,FAIL,HIGH,Network ACL should restrict access over remote administration ports,2022-05-17T10:30:26Z,"Perform the following commands to delete or modify an inbound NACL rule to restrict remote administration ports access to specific entities via AWS CLI:   
+**1.** To view the current NACL configuration:   
+```  
+aws ec2 describe-network-acls --network-acl-ids {{naclId}}  
+```  
+**2.** To modify an inbound rule, use the rule number from the previous output in the following command, and insert the wanted port range and IP CIDR:  
+```  
+aws ec2 replace-network-acl-entry --network-acl-id   --protocol tcp --rule-action allow --rule-number <ruleNumber> --ingress --cidr-block <ipCidr> --port-range From=<port>,To=<port>  
+```   
+**3.** To delete an unrestricted rule (allowed ingress connection of SSH\ RDP with 0.0.0.0/0) use the rule number from the previous output in the following command:  
+  
+```  
+aws ec2 delete-network-acl-entry --network-acl-id {{naclId}} --ingress --rule-number <ruleNumber>  
+```"
+acl-0f0024a5da0224ac9,acl-0f0024a5da0224ac9,CloudPlatform/Firewall,networkAcl,5.1 Ensure no Network ACLs allow ingress from 0.0.0.0/0 to remote server administration ports,FAIL,HIGH,Network ACL should restrict access over remote administration ports,2022-05-17T10:31:14Z,"Perform the following commands to delete or modify an inbound NACL rule to restrict remote administration ports access to specific entities via AWS CLI:   
+**1.** To view the current NACL configuration:   
+```  
+aws ec2 describe-network-acls --network-acl-ids {{naclId}}  
+```  
+**2.** To modify an inbound rule, use the rule number from the previous output in the following command, and insert the wanted port range and IP CIDR:  
+```  
+aws ec2 replace-network-acl-entry --network-acl-id   --protocol tcp --rule-action allow --rule-number <ruleNumber> --ingress --cidr-block <ipCidr> --port-range From=<port>,To=<port>  
+```   
+**3.** To delete an unrestricted rule (allowed ingress connection of SSH\ RDP with 0.0.0.0/0) use the rule number from the previous output in the following command:  
+  
+```  
+aws ec2 delete-network-acl-entry --network-acl-id {{naclId}} --ingress --rule-number <ruleNumber>  
+```"
+acl-0bacae6c,acl-0bacae6c,CloudPlatform/Firewall,networkAcl,5.1 Ensure no Network ACLs allow ingress from 0.0.0.0/0 to remote server administration ports,FAIL,HIGH,Network ACL should restrict access over remote administration ports,2022-05-17T10:28:04Z,"Perform the following commands to delete or modify an inbound NACL rule to restrict remote administration ports access to specific entities via AWS CLI:   
+**1.** To view the current NACL configuration:   
+```  
+aws ec2 describe-network-acls --network-acl-ids {{naclId}}  
+```  
+**2.** To modify an inbound rule, use the rule number from the previous output in the following command, and insert the wanted port range and IP CIDR:  
+```  
+aws ec2 replace-network-acl-entry --network-acl-id   --protocol tcp --rule-action allow --rule-number <ruleNumber> --ingress --cidr-block <ipCidr> --port-range From=<port>,To=<port>  
+```   
+**3.** To delete an unrestricted rule (allowed ingress connection of SSH\ RDP with 0.0.0.0/0) use the rule number from the previous output in the following command:  
+  
+```  
+aws ec2 delete-network-acl-entry --network-acl-id {{naclId}} --ingress --rule-number <ruleNumber>  
+```"
+acl-6a543900,acl-6a543900,CloudPlatform/Firewall,networkAcl,5.1 Ensure no Network ACLs allow ingress from 0.0.0.0/0 to remote server administration ports,FAIL,HIGH,Network ACL should restrict access over remote administration ports,2022-05-17T01:15:46Z,"Perform the following commands to delete or modify an inbound NACL rule to restrict remote administration ports access to specific entities via AWS CLI:   
+**1.** To view the current NACL configuration:   
+```  
+aws ec2 describe-network-acls --network-acl-ids {{naclId}}  
+```  
+**2.** To modify an inbound rule, use the rule number from the previous output in the following command, and insert the wanted port range and IP CIDR:  
+```  
+aws ec2 replace-network-acl-entry --network-acl-id   --protocol tcp --rule-action allow --rule-number <ruleNumber> --ingress --cidr-block <ipCidr> --port-range From=<port>,To=<port>  
+```   
+**3.** To delete an unrestricted rule (allowed ingress connection of SSH\ RDP with 0.0.0.0/0) use the rule number from the previous output in the following command:  
+  
+```  
+aws ec2 delete-network-acl-entry --network-acl-id {{naclId}} --ingress --rule-number <ruleNumber>  
+```"
+acl-c9fc79a0,acl-c9fc79a0,CloudPlatform/Firewall,networkAcl,5.1 Ensure no Network ACLs allow ingress from 0.0.0.0/0 to remote server administration ports,FAIL,HIGH,Network ACL should restrict access over remote administration ports,2022-05-17T01:19:51Z,"Perform the following commands to delete or modify an inbound NACL rule to restrict remote administration ports access to specific entities via AWS CLI:   
+**1.** To view the current NACL configuration:   
+```  
+aws ec2 describe-network-acls --network-acl-ids {{naclId}}  
+```  
+**2.** To modify an inbound rule, use the rule number from the previous output in the following command, and insert the wanted port range and IP CIDR:  
+```  
+aws ec2 replace-network-acl-entry --network-acl-id   --protocol tcp --rule-action allow --rule-number <ruleNumber> --ingress --cidr-block <ipCidr> --port-range From=<port>,To=<port>  
+```   
+**3.** To delete an unrestricted rule (allowed ingress connection of SSH\ RDP with 0.0.0.0/0) use the rule number from the previous output in the following command:  
+  
+```  
+aws ec2 delete-network-acl-entry --network-acl-id {{naclId}} --ingress --rule-number <ruleNumber>  
+```"
+acl-7f1b6c16,acl-7f1b6c16,CloudPlatform/Firewall,networkAcl,5.1 Ensure no Network ACLs allow ingress from 0.0.0.0/0 to remote server administration ports,FAIL,HIGH,Network ACL should restrict access over remote administration ports,2022-05-17T01:15:47Z,"Perform the following commands to delete or modify an inbound NACL rule to restrict remote administration ports access to specific entities via AWS CLI:   
+**1.** To view the current NACL configuration:   
+```  
+aws ec2 describe-network-acls --network-acl-ids {{naclId}}  
+```  
+**2.** To modify an inbound rule, use the rule number from the previous output in the following command, and insert the wanted port range and IP CIDR:  
+```  
+aws ec2 replace-network-acl-entry --network-acl-id   --protocol tcp --rule-action allow --rule-number <ruleNumber> --ingress --cidr-block <ipCidr> --port-range From=<port>,To=<port>  
+```   
+**3.** To delete an unrestricted rule (allowed ingress connection of SSH\ RDP with 0.0.0.0/0) use the rule number from the previous output in the following command:  
+  
+```  
+aws ec2 delete-network-acl-entry --network-acl-id {{naclId}} --ingress --rule-number <ruleNumber>  
+```"
+acl-08f77c73,acl-08f77c73,CloudPlatform/Firewall,networkAcl,5.1 Ensure no Network ACLs allow ingress from 0.0.0.0/0 to remote server administration ports,FAIL,HIGH,Network ACL should restrict access over remote administration ports,2022-05-17T01:17:25Z,"Perform the following commands to delete or modify an inbound NACL rule to restrict remote administration ports access to specific entities via AWS CLI:   
+**1.** To view the current NACL configuration:   
+```  
+aws ec2 describe-network-acls --network-acl-ids {{naclId}}  
+```  
+**2.** To modify an inbound rule, use the rule number from the previous output in the following command, and insert the wanted port range and IP CIDR:  
+```  
+aws ec2 replace-network-acl-entry --network-acl-id   --protocol tcp --rule-action allow --rule-number <ruleNumber> --ingress --cidr-block <ipCidr> --port-range From=<port>,To=<port>  
+```   
+**3.** To delete an unrestricted rule (allowed ingress connection of SSH\ RDP with 0.0.0.0/0) use the rule number from the previous output in the following command:  
+  
+```  
+aws ec2 delete-network-acl-entry --network-acl-id {{naclId}} --ingress --rule-number <ruleNumber>  
+```"
+acl-ce3118b4,acl-ce3118b4,CloudPlatform/Firewall,networkAcl,5.1 Ensure no Network ACLs allow ingress from 0.0.0.0/0 to remote server administration ports,FAIL,HIGH,Network ACL should restrict access over remote administration ports,2022-05-17T01:19:50Z,"Perform the following commands to delete or modify an inbound NACL rule to restrict remote administration ports access to specific entities via AWS CLI:   
+**1.** To view the current NACL configuration:   
+```  
+aws ec2 describe-network-acls --network-acl-ids {{naclId}}  
+```  
+**2.** To modify an inbound rule, use the rule number from the previous output in the following command, and insert the wanted port range and IP CIDR:  
+```  
+aws ec2 replace-network-acl-entry --network-acl-id   --protocol tcp --rule-action allow --rule-number <ruleNumber> --ingress --cidr-block <ipCidr> --port-range From=<port>,To=<port>  
+```   
+**3.** To delete an unrestricted rule (allowed ingress connection of SSH\ RDP with 0.0.0.0/0) use the rule number from the previous output in the following command:  
+  
+```  
+aws ec2 delete-network-acl-entry --network-acl-id {{naclId}} --ingress --rule-number <ruleNumber>  
+```"
+acl-d5df24be,acl-d5df24be,CloudPlatform/Firewall,networkAcl,5.1 Ensure no Network ACLs allow ingress from 0.0.0.0/0 to remote server administration ports,FAIL,HIGH,Network ACL should restrict access over remote administration ports,2022-05-17T01:15:49Z,"Perform the following commands to delete or modify an inbound NACL rule to restrict remote administration ports access to specific entities via AWS CLI:   
+**1.** To view the current NACL configuration:   
+```  
+aws ec2 describe-network-acls --network-acl-ids {{naclId}}  
+```  
+**2.** To modify an inbound rule, use the rule number from the previous output in the following command, and insert the wanted port range and IP CIDR:  
+```  
+aws ec2 replace-network-acl-entry --network-acl-id   --protocol tcp --rule-action allow --rule-number <ruleNumber> --ingress --cidr-block <ipCidr> --port-range From=<port>,To=<port>  
+```   
+**3.** To delete an unrestricted rule (allowed ingress connection of SSH\ RDP with 0.0.0.0/0) use the rule number from the previous output in the following command:  
+  
+```  
+aws ec2 delete-network-acl-entry --network-acl-id {{naclId}} --ingress --rule-number <ruleNumber>  
+```"
+acl-21260849,acl-21260849,CloudPlatform/Firewall,networkAcl,5.1 Ensure no Network ACLs allow ingress from 0.0.0.0/0 to remote server administration ports,FAIL,HIGH,Network ACL should restrict access over remote administration ports,2022-05-17T10:28:03Z,"Perform the following commands to delete or modify an inbound NACL rule to restrict remote administration ports access to specific entities via AWS CLI:   
+**1.** To view the current NACL configuration:   
+```  
+aws ec2 describe-network-acls --network-acl-ids {{naclId}}  
+```  
+**2.** To modify an inbound rule, use the rule number from the previous output in the following command, and insert the wanted port range and IP CIDR:  
+```  
+aws ec2 replace-network-acl-entry --network-acl-id   --protocol tcp --rule-action allow --rule-number <ruleNumber> --ingress --cidr-block <ipCidr> --port-range From=<port>,To=<port>  
+```   
+**3.** To delete an unrestricted rule (allowed ingress connection of SSH\ RDP with 0.0.0.0/0) use the rule number from the previous output in the following command:  
+  
+```  
+aws ec2 delete-network-acl-entry --network-acl-id {{naclId}} --ingress --rule-number <ruleNumber>  
+```"
+acl-5be9663e,acl-5be9663e,CloudPlatform/Firewall,networkAcl,5.1 Ensure no Network ACLs allow ingress from 0.0.0.0/0 to remote server administration ports,FAIL,HIGH,Network ACL should restrict access over remote administration ports,2022-05-17T01:17:25Z,"Perform the following commands to delete or modify an inbound NACL rule to restrict remote administration ports access to specific entities via AWS CLI:   
+**1.** To view the current NACL configuration:   
+```  
+aws ec2 describe-network-acls --network-acl-ids {{naclId}}  
+```  
+**2.** To modify an inbound rule, use the rule number from the previous output in the following command, and insert the wanted port range and IP CIDR:  
+```  
+aws ec2 replace-network-acl-entry --network-acl-id   --protocol tcp --rule-action allow --rule-number <ruleNumber> --ingress --cidr-block <ipCidr> --port-range From=<port>,To=<port>  
+```   
+**3.** To delete an unrestricted rule (allowed ingress connection of SSH\ RDP with 0.0.0.0/0) use the rule number from the previous output in the following command:  
+  
+```  
+aws ec2 delete-network-acl-entry --network-acl-id {{naclId}} --ingress --rule-number <ruleNumber>  
+```"
+acl-0b6ff5bd48cb7e686,acl-0b6ff5bd48cb7e686,CloudPlatform/Firewall,networkAcl,5.1 Ensure no Network ACLs allow ingress from 0.0.0.0/0 to remote server administration ports,FAIL,HIGH,Network ACL should restrict access over remote administration ports,2022-05-17T10:31:14Z,"Perform the following commands to delete or modify an inbound NACL rule to restrict remote administration ports access to specific entities via AWS CLI:   
+**1.** To view the current NACL configuration:   
+```  
+aws ec2 describe-network-acls --network-acl-ids {{naclId}}  
+```  
+**2.** To modify an inbound rule, use the rule number from the previous output in the following command, and insert the wanted port range and IP CIDR:  
+```  
+aws ec2 replace-network-acl-entry --network-acl-id   --protocol tcp --rule-action allow --rule-number <ruleNumber> --ingress --cidr-block <ipCidr> --port-range From=<port>,To=<port>  
+```   
+**3.** To delete an unrestricted rule (allowed ingress connection of SSH\ RDP with 0.0.0.0/0) use the rule number from the previous output in the following command:  
+  
+```  
+aws ec2 delete-network-acl-entry --network-acl-id {{naclId}} --ingress --rule-number <ruleNumber>  
+```"
+acl-0b35b7c957f46dcaa,acl-0b35b7c957f46dcaa,CloudPlatform/Firewall,networkAcl,5.1 Ensure no Network ACLs allow ingress from 0.0.0.0/0 to remote server administration ports,FAIL,HIGH,Network ACL should restrict access over remote administration ports,2022-05-17T10:30:26Z,"Perform the following commands to delete or modify an inbound NACL rule to restrict remote administration ports access to specific entities via AWS CLI:   
+**1.** To view the current NACL configuration:   
+```  
+aws ec2 describe-network-acls --network-acl-ids {{naclId}}  
+```  
+**2.** To modify an inbound rule, use the rule number from the previous output in the following command, and insert the wanted port range and IP CIDR:  
+```  
+aws ec2 replace-network-acl-entry --network-acl-id   --protocol tcp --rule-action allow --rule-number <ruleNumber> --ingress --cidr-block <ipCidr> --port-range From=<port>,To=<port>  
+```   
+**3.** To delete an unrestricted rule (allowed ingress connection of SSH\ RDP with 0.0.0.0/0) use the rule number from the previous output in the following command:  
+  
+```  
+aws ec2 delete-network-acl-entry --network-acl-id {{naclId}} --ingress --rule-number <ruleNumber>  
+```"
+acl-b92b82df,acl-b92b82df,CloudPlatform/Firewall,networkAcl,5.1 Ensure no Network ACLs allow ingress from 0.0.0.0/0 to remote server administration ports,FAIL,HIGH,Network ACL should restrict access over remote administration ports,2022-05-17T10:28:06Z,"Perform the following commands to delete or modify an inbound NACL rule to restrict remote administration ports access to specific entities via AWS CLI:   
+**1.** To view the current NACL configuration:   
+```  
+aws ec2 describe-network-acls --network-acl-ids {{naclId}}  
+```  
+**2.** To modify an inbound rule, use the rule number from the previous output in the following command, and insert the wanted port range and IP CIDR:  
+```  
+aws ec2 replace-network-acl-entry --network-acl-id   --protocol tcp --rule-action allow --rule-number <ruleNumber> --ingress --cidr-block <ipCidr> --port-range From=<port>,To=<port>  
+```   
+**3.** To delete an unrestricted rule (allowed ingress connection of SSH\ RDP with 0.0.0.0/0) use the rule number from the previous output in the following command:  
+  
+```  
+aws ec2 delete-network-acl-entry --network-acl-id {{naclId}} --ingress --rule-number <ruleNumber>  
+```"
+acl-dd5f85b4,acl-dd5f85b4,CloudPlatform/Firewall,networkAcl,5.1 Ensure no Network ACLs allow ingress from 0.0.0.0/0 to remote server administration ports,FAIL,HIGH,Network ACL should restrict access over remote administration ports,2022-05-17T01:15:47Z,"Perform the following commands to delete or modify an inbound NACL rule to restrict remote administration ports access to specific entities via AWS CLI:   
+**1.** To view the current NACL configuration:   
+```  
+aws ec2 describe-network-acls --network-acl-ids {{naclId}}  
+```  
+**2.** To modify an inbound rule, use the rule number from the previous output in the following command, and insert the wanted port range and IP CIDR:  
+```  
+aws ec2 replace-network-acl-entry --network-acl-id   --protocol tcp --rule-action allow --rule-number <ruleNumber> --ingress --cidr-block <ipCidr> --port-range From=<port>,To=<port>  
+```   
+**3.** To delete an unrestricted rule (allowed ingress connection of SSH\ RDP with 0.0.0.0/0) use the rule number from the previous output in the following command:  
+  
+```  
+aws ec2 delete-network-acl-entry --network-acl-id {{naclId}} --ingress --rule-number <ruleNumber>  
+```"
+acl-4ff19029,acl-4ff19029,CloudPlatform/Firewall,networkAcl,5.1 Ensure no Network ACLs allow ingress from 0.0.0.0/0 to remote server administration ports,FAIL,HIGH,Network ACL should restrict access over remote administration ports,2022-05-17T01:19:49Z,"Perform the following commands to delete or modify an inbound NACL rule to restrict remote administration ports access to specific entities via AWS CLI:   
+**1.** To view the current NACL configuration:   
+```  
+aws ec2 describe-network-acls --network-acl-ids {{naclId}}  
+```  
+**2.** To modify an inbound rule, use the rule number from the previous output in the following command, and insert the wanted port range and IP CIDR:  
+```  
+aws ec2 replace-network-acl-entry --network-acl-id   --protocol tcp --rule-action allow --rule-number <ruleNumber> --ingress --cidr-block <ipCidr> --port-range From=<port>,To=<port>  
+```   
+**3.** To delete an unrestricted rule (allowed ingress connection of SSH\ RDP with 0.0.0.0/0) use the rule number from the previous output in the following command:  
+  
+```  
+aws ec2 delete-network-acl-entry --network-acl-id {{naclId}} --ingress --rule-number <ruleNumber>  
+```"
+acl-12ebfd7a,acl-12ebfd7a,CloudPlatform/Firewall,networkAcl,5.1 Ensure no Network ACLs allow ingress from 0.0.0.0/0 to remote server administration ports,FAIL,HIGH,Network ACL should restrict access over remote administration ports,2022-05-17T01:19:48Z,"Perform the following commands to delete or modify an inbound NACL rule to restrict remote administration ports access to specific entities via AWS CLI:   
+**1.** To view the current NACL configuration:   
+```  
+aws ec2 describe-network-acls --network-acl-ids {{naclId}}  
+```  
+**2.** To modify an inbound rule, use the rule number from the previous output in the following command, and insert the wanted port range and IP CIDR:  
+```  
+aws ec2 replace-network-acl-entry --network-acl-id   --protocol tcp --rule-action allow --rule-number <ruleNumber> --ingress --cidr-block <ipCidr> --port-range From=<port>,To=<port>  
+```   
+**3.** To delete an unrestricted rule (allowed ingress connection of SSH\ RDP with 0.0.0.0/0) use the rule number from the previous output in the following command:  
+  
+```  
+aws ec2 delete-network-acl-entry --network-acl-id {{naclId}} --ingress --rule-number <ruleNumber>  
+```"
+acl-046c3cf863be3291c,acl-046c3cf863be3291c,CloudPlatform/Firewall,networkAcl,5.1 Ensure no Network ACLs allow ingress from 0.0.0.0/0 to remote server administration ports,FAIL,HIGH,Network ACL should restrict access over remote administration ports,2022-05-17T10:31:14Z,"Perform the following commands to delete or modify an inbound NACL rule to restrict remote administration ports access to specific entities via AWS CLI:   
+**1.** To view the current NACL configuration:   
+```  
+aws ec2 describe-network-acls --network-acl-ids {{naclId}}  
+```  
+**2.** To modify an inbound rule, use the rule number from the previous output in the following command, and insert the wanted port range and IP CIDR:  
+```  
+aws ec2 replace-network-acl-entry --network-acl-id   --protocol tcp --rule-action allow --rule-number <ruleNumber> --ingress --cidr-block <ipCidr> --port-range From=<port>,To=<port>  
+```   
+**3.** To delete an unrestricted rule (allowed ingress connection of SSH\ RDP with 0.0.0.0/0) use the rule number from the previous output in the following command:  
+  
+```  
+aws ec2 delete-network-acl-entry --network-acl-id {{naclId}} --ingress --rule-number <ruleNumber>  
+```"
+acl-a8fc0ecd,acl-a8fc0ecd,CloudPlatform/Firewall,networkAcl,5.1 Ensure no Network ACLs allow ingress from 0.0.0.0/0 to remote server administration ports,FAIL,HIGH,Network ACL should restrict access over remote administration ports,2022-05-17T01:17:14Z,"Perform the following commands to delete or modify an inbound NACL rule to restrict remote administration ports access to specific entities via AWS CLI:   
+**1.** To view the current NACL configuration:   
+```  
+aws ec2 describe-network-acls --network-acl-ids {{naclId}}  
+```  
+**2.** To modify an inbound rule, use the rule number from the previous output in the following command, and insert the wanted port range and IP CIDR:  
+```  
+aws ec2 replace-network-acl-entry --network-acl-id   --protocol tcp --rule-action allow --rule-number <ruleNumber> --ingress --cidr-block <ipCidr> --port-range From=<port>,To=<port>  
+```   
+**3.** To delete an unrestricted rule (allowed ingress connection of SSH\ RDP with 0.0.0.0/0) use the rule number from the previous output in the following command:  
+  
+```  
+aws ec2 delete-network-acl-entry --network-acl-id {{naclId}} --ingress --rule-number <ruleNumber>  
+```"
+acl-5e8ef223,acl-5e8ef223,CloudPlatform/Firewall,networkAcl,5.1 Ensure no Network ACLs allow ingress from 0.0.0.0/0 to remote server administration ports,FAIL,HIGH,Network ACL should restrict access over remote administration ports,2022-05-17T01:15:49Z,"Perform the following commands to delete or modify an inbound NACL rule to restrict remote administration ports access to specific entities via AWS CLI:   
+**1.** To view the current NACL configuration:   
+```  
+aws ec2 describe-network-acls --network-acl-ids {{naclId}}  
+```  
+**2.** To modify an inbound rule, use the rule number from the previous output in the following command, and insert the wanted port range and IP CIDR:  
+```  
+aws ec2 replace-network-acl-entry --network-acl-id   --protocol tcp --rule-action allow --rule-number <ruleNumber> --ingress --cidr-block <ipCidr> --port-range From=<port>,To=<port>  
+```   
+**3.** To delete an unrestricted rule (allowed ingress connection of SSH\ RDP with 0.0.0.0/0) use the rule number from the previous output in the following command:  
+  
+```  
+aws ec2 delete-network-acl-entry --network-acl-id {{naclId}} --ingress --rule-number <ruleNumber>  
+```"
+acl-28a6594d,acl-28a6594d,CloudPlatform/Firewall,networkAcl,5.1 Ensure no Network ACLs allow ingress from 0.0.0.0/0 to remote server administration ports,FAIL,HIGH,Network ACL should restrict access over remote administration ports,2022-05-17T01:17:15Z,"Perform the following commands to delete or modify an inbound NACL rule to restrict remote administration ports access to specific entities via AWS CLI:   
+**1.** To view the current NACL configuration:   
+```  
+aws ec2 describe-network-acls --network-acl-ids {{naclId}}  
+```  
+**2.** To modify an inbound rule, use the rule number from the previous output in the following command, and insert the wanted port range and IP CIDR:  
+```  
+aws ec2 replace-network-acl-entry --network-acl-id   --protocol tcp --rule-action allow --rule-number <ruleNumber> --ingress --cidr-block <ipCidr> --port-range From=<port>,To=<port>  
+```   
+**3.** To delete an unrestricted rule (allowed ingress connection of SSH\ RDP with 0.0.0.0/0) use the rule number from the previous output in the following command:  
+  
+```  
+aws ec2 delete-network-acl-entry --network-acl-id {{naclId}} --ingress --rule-number <ruleNumber>  
+```"
+acl-e039dd88,acl-e039dd88,CloudPlatform/Firewall,networkAcl,5.1 Ensure no Network ACLs allow ingress from 0.0.0.0/0 to remote server administration ports,FAIL,HIGH,Network ACL should restrict access over remote administration ports,2022-05-17T10:28:04Z,"Perform the following commands to delete or modify an inbound NACL rule to restrict remote administration ports access to specific entities via AWS CLI:   
+**1.** To view the current NACL configuration:   
+```  
+aws ec2 describe-network-acls --network-acl-ids {{naclId}}  
+```  
+**2.** To modify an inbound rule, use the rule number from the previous output in the following command, and insert the wanted port range and IP CIDR:  
+```  
+aws ec2 replace-network-acl-entry --network-acl-id   --protocol tcp --rule-action allow --rule-number <ruleNumber> --ingress --cidr-block <ipCidr> --port-range From=<port>,To=<port>  
+```   
+**3.** To delete an unrestricted rule (allowed ingress connection of SSH\ RDP with 0.0.0.0/0) use the rule number from the previous output in the following command:  
+  
+```  
+aws ec2 delete-network-acl-entry --network-acl-id {{naclId}} --ingress --rule-number <ruleNumber>  
+```"
+acl-0094306b,acl-0094306b,CloudPlatform/Firewall,networkAcl,5.1 Ensure no Network ACLs allow ingress from 0.0.0.0/0 to remote server administration ports,FAIL,HIGH,Network ACL should restrict access over remote administration ports,2022-05-17T01:19:53Z,"Perform the following commands to delete or modify an inbound NACL rule to restrict remote administration ports access to specific entities via AWS CLI:   
+**1.** To view the current NACL configuration:   
+```  
+aws ec2 describe-network-acls --network-acl-ids {{naclId}}  
+```  
+**2.** To modify an inbound rule, use the rule number from the previous output in the following command, and insert the wanted port range and IP CIDR:  
+```  
+aws ec2 replace-network-acl-entry --network-acl-id   --protocol tcp --rule-action allow --rule-number <ruleNumber> --ingress --cidr-block <ipCidr> --port-range From=<port>,To=<port>  
+```   
+**3.** To delete an unrestricted rule (allowed ingress connection of SSH\ RDP with 0.0.0.0/0) use the rule number from the previous output in the following command:  
+  
+```  
+aws ec2 delete-network-acl-entry --network-acl-id {{naclId}} --ingress --rule-number <ruleNumber>  
+```"
+acl-03e5448e6c82536ed,acl-03e5448e6c82536ed,CloudPlatform/Firewall,networkAcl,5.1 Ensure no Network ACLs allow ingress from 0.0.0.0/0 to remote server administration ports,FAIL,HIGH,Network ACL should restrict access over remote administration ports,2022-05-17T10:31:15Z,"Perform the following commands to delete or modify an inbound NACL rule to restrict remote administration ports access to specific entities via AWS CLI:   
+**1.** To view the current NACL configuration:   
+```  
+aws ec2 describe-network-acls --network-acl-ids {{naclId}}  
+```  
+**2.** To modify an inbound rule, use the rule number from the previous output in the following command, and insert the wanted port range and IP CIDR:  
+```  
+aws ec2 replace-network-acl-entry --network-acl-id   --protocol tcp --rule-action allow --rule-number <ruleNumber> --ingress --cidr-block <ipCidr> --port-range From=<port>,To=<port>  
+```   
+**3.** To delete an unrestricted rule (allowed ingress connection of SSH\ RDP with 0.0.0.0/0) use the rule number from the previous output in the following command:  
+  
+```  
+aws ec2 delete-network-acl-entry --network-acl-id {{naclId}} --ingress --rule-number <ruleNumber>  
+```"
+acl-aafd16c3,acl-aafd16c3,CloudPlatform/Firewall,networkAcl,5.1 Ensure no Network ACLs allow ingress from 0.0.0.0/0 to remote server administration ports,FAIL,HIGH,Network ACL should restrict access over remote administration ports,2022-05-17T01:17:12Z,"Perform the following commands to delete or modify an inbound NACL rule to restrict remote administration ports access to specific entities via AWS CLI:   
+**1.** To view the current NACL configuration:   
+```  
+aws ec2 describe-network-acls --network-acl-ids {{naclId}}  
+```  
+**2.** To modify an inbound rule, use the rule number from the previous output in the following command, and insert the wanted port range and IP CIDR:  
+```  
+aws ec2 replace-network-acl-entry --network-acl-id   --protocol tcp --rule-action allow --rule-number <ruleNumber> --ingress --cidr-block <ipCidr> --port-range From=<port>,To=<port>  
+```   
+**3.** To delete an unrestricted rule (allowed ingress connection of SSH\ RDP with 0.0.0.0/0) use the rule number from the previous output in the following command:  
+  
+```  
+aws ec2 delete-network-acl-entry --network-acl-id {{naclId}} --ingress --rule-number <ruleNumber>  
+```"
+acl-03a354d9766bb0663,acl-03a354d9766bb0663,CloudPlatform/Firewall,networkAcl,5.1 Ensure no Network ACLs allow ingress from 0.0.0.0/0 to remote server administration ports,FAIL,HIGH,Network ACL should restrict access over remote administration ports,2022-05-17T10:31:15Z,"Perform the following commands to delete or modify an inbound NACL rule to restrict remote administration ports access to specific entities via AWS CLI:   
+**1.** To view the current NACL configuration:   
+```  
+aws ec2 describe-network-acls --network-acl-ids {{naclId}}  
+```  
+**2.** To modify an inbound rule, use the rule number from the previous output in the following command, and insert the wanted port range and IP CIDR:  
+```  
+aws ec2 replace-network-acl-entry --network-acl-id   --protocol tcp --rule-action allow --rule-number <ruleNumber> --ingress --cidr-block <ipCidr> --port-range From=<port>,To=<port>  
+```   
+**3.** To delete an unrestricted rule (allowed ingress connection of SSH\ RDP with 0.0.0.0/0) use the rule number from the previous output in the following command:  
+  
+```  
+aws ec2 delete-network-acl-entry --network-acl-id {{naclId}} --ingress --rule-number <ruleNumber>  
+```"
+acl-6b6cca00,acl-6b6cca00,CloudPlatform/Firewall,networkAcl,5.1 Ensure no Network ACLs allow ingress from 0.0.0.0/0 to remote server administration ports,FAIL,HIGH,Network ACL should restrict access over remote administration ports,2022-05-17T10:30:20Z,"Perform the following commands to delete or modify an inbound NACL rule to restrict remote administration ports access to specific entities via AWS CLI:   
+**1.** To view the current NACL configuration:   
+```  
+aws ec2 describe-network-acls --network-acl-ids {{naclId}}  
+```  
+**2.** To modify an inbound rule, use the rule number from the previous output in the following command, and insert the wanted port range and IP CIDR:  
+```  
+aws ec2 replace-network-acl-entry --network-acl-id   --protocol tcp --rule-action allow --rule-number <ruleNumber> --ingress --cidr-block <ipCidr> --port-range From=<port>,To=<port>  
+```   
+**3.** To delete an unrestricted rule (allowed ingress connection of SSH\ RDP with 0.0.0.0/0) use the rule number from the previous output in the following command:  
+  
+```  
+aws ec2 delete-network-acl-entry --network-acl-id {{naclId}} --ingress --rule-number <ruleNumber>  
+```"
+acl-8c9fc2e4,acl-8c9fc2e4,CloudPlatform/Firewall,networkAcl,5.1 Ensure no Network ACLs allow ingress from 0.0.0.0/0 to remote server administration ports,FAIL,HIGH,Network ACL should restrict access over remote administration ports,2022-05-17T10:30:21Z,"Perform the following commands to delete or modify an inbound NACL rule to restrict remote administration ports access to specific entities via AWS CLI:   
+**1.** To view the current NACL configuration:   
+```  
+aws ec2 describe-network-acls --network-acl-ids {{naclId}}  
+```  
+**2.** To modify an inbound rule, use the rule number from the previous output in the following command, and insert the wanted port range and IP CIDR:  
+```  
+aws ec2 replace-network-acl-entry --network-acl-id   --protocol tcp --rule-action allow --rule-number <ruleNumber> --ingress --cidr-block <ipCidr> --port-range From=<port>,To=<port>  
+```   
+**3.** To delete an unrestricted rule (allowed ingress connection of SSH\ RDP with 0.0.0.0/0) use the rule number from the previous output in the following command:  
+  
+```  
+aws ec2 delete-network-acl-entry --network-acl-id {{naclId}} --ingress --rule-number <ruleNumber>  
+```"
+acl-c192aea6,acl-c192aea6,CloudPlatform/Firewall,networkAcl,5.1 Ensure no Network ACLs allow ingress from 0.0.0.0/0 to remote server administration ports,FAIL,HIGH,Network ACL should restrict access over remote administration ports,2022-05-17T10:30:22Z,"Perform the following commands to delete or modify an inbound NACL rule to restrict remote administration ports access to specific entities via AWS CLI:   
+**1.** To view the current NACL configuration:   
+```  
+aws ec2 describe-network-acls --network-acl-ids {{naclId}}  
+```  
+**2.** To modify an inbound rule, use the rule number from the previous output in the following command, and insert the wanted port range and IP CIDR:  
+```  
+aws ec2 replace-network-acl-entry --network-acl-id   --protocol tcp --rule-action allow --rule-number <ruleNumber> --ingress --cidr-block <ipCidr> --port-range From=<port>,To=<port>  
+```   
+**3.** To delete an unrestricted rule (allowed ingress connection of SSH\ RDP with 0.0.0.0/0) use the rule number from the previous output in the following command:  
+  
+```  
+aws ec2 delete-network-acl-entry --network-acl-id {{naclId}} --ingress --rule-number <ruleNumber>  
+```"
+acl-0bf6bbf8f87ba5a4f,acl-0bf6bbf8f87ba5a4f,CloudPlatform/Firewall,networkAcl,5.1 Ensure no Network ACLs allow ingress from 0.0.0.0/0 to remote server administration ports,FAIL,HIGH,Network ACL should restrict access over remote administration ports,2022-05-17T01:17:13Z,"Perform the following commands to delete or modify an inbound NACL rule to restrict remote administration ports access to specific entities via AWS CLI:   
+**1.** To view the current NACL configuration:   
+```  
+aws ec2 describe-network-acls --network-acl-ids {{naclId}}  
+```  
+**2.** To modify an inbound rule, use the rule number from the previous output in the following command, and insert the wanted port range and IP CIDR:  
+```  
+aws ec2 replace-network-acl-entry --network-acl-id   --protocol tcp --rule-action allow --rule-number <ruleNumber> --ingress --cidr-block <ipCidr> --port-range From=<port>,To=<port>  
+```   
+**3.** To delete an unrestricted rule (allowed ingress connection of SSH\ RDP with 0.0.0.0/0) use the rule number from the previous output in the following command:  
+  
+```  
+aws ec2 delete-network-acl-entry --network-acl-id {{naclId}} --ingress --rule-number <ruleNumber>  
+```"
+acl-2e831544,acl-2e831544,CloudPlatform/Firewall,networkAcl,5.1 Ensure no Network ACLs allow ingress from 0.0.0.0/0 to remote server administration ports,FAIL,HIGH,Network ACL should restrict access over remote administration ports,2022-05-17T10:30:22Z,"Perform the following commands to delete or modify an inbound NACL rule to restrict remote administration ports access to specific entities via AWS CLI:   
+**1.** To view the current NACL configuration:   
+```  
+aws ec2 describe-network-acls --network-acl-ids {{naclId}}  
+```  
+**2.** To modify an inbound rule, use the rule number from the previous output in the following command, and insert the wanted port range and IP CIDR:  
+```  
+aws ec2 replace-network-acl-entry --network-acl-id   --protocol tcp --rule-action allow --rule-number <ruleNumber> --ingress --cidr-block <ipCidr> --port-range From=<port>,To=<port>  
+```   
+**3.** To delete an unrestricted rule (allowed ingress connection of SSH\ RDP with 0.0.0.0/0) use the rule number from the previous output in the following command:  
+  
+```  
+aws ec2 delete-network-acl-entry --network-acl-id {{naclId}} --ingress --rule-number <ruleNumber>  
+```"
+acl-fbcc9191,acl-fbcc9191,CloudPlatform/Firewall,networkAcl,5.1 Ensure no Network ACLs allow ingress from 0.0.0.0/0 to remote server administration ports,FAIL,HIGH,Network ACL should restrict access over remote administration ports,2022-05-17T01:19:50Z,"Perform the following commands to delete or modify an inbound NACL rule to restrict remote administration ports access to specific entities via AWS CLI:   
+**1.** To view the current NACL configuration:   
+```  
+aws ec2 describe-network-acls --network-acl-ids {{naclId}}  
+```  
+**2.** To modify an inbound rule, use the rule number from the previous output in the following command, and insert the wanted port range and IP CIDR:  
+```  
+aws ec2 replace-network-acl-entry --network-acl-id   --protocol tcp --rule-action allow --rule-number <ruleNumber> --ingress --cidr-block <ipCidr> --port-range From=<port>,To=<port>  
+```   
+**3.** To delete an unrestricted rule (allowed ingress connection of SSH\ RDP with 0.0.0.0/0) use the rule number from the previous output in the following command:  
+  
+```  
+aws ec2 delete-network-acl-entry --network-acl-id {{naclId}} --ingress --rule-number <ruleNumber>  
+```"
+acl-5cc50427,acl-5cc50427,CloudPlatform/Firewall,networkAcl,5.1 Ensure no Network ACLs allow ingress from 0.0.0.0/0 to remote server administration ports,FAIL,HIGH,Network ACL should restrict access over remote administration ports,2022-05-17T01:15:45Z,"Perform the following commands to delete or modify an inbound NACL rule to restrict remote administration ports access to specific entities via AWS CLI:   
+**1.** To view the current NACL configuration:   
+```  
+aws ec2 describe-network-acls --network-acl-ids {{naclId}}  
+```  
+**2.** To modify an inbound rule, use the rule number from the previous output in the following command, and insert the wanted port range and IP CIDR:  
+```  
+aws ec2 replace-network-acl-entry --network-acl-id   --protocol tcp --rule-action allow --rule-number <ruleNumber> --ingress --cidr-block <ipCidr> --port-range From=<port>,To=<port>  
+```   
+**3.** To delete an unrestricted rule (allowed ingress connection of SSH\ RDP with 0.0.0.0/0) use the rule number from the previous output in the following command:  
+  
+```  
+aws ec2 delete-network-acl-entry --network-acl-id {{naclId}} --ingress --rule-number <ruleNumber>  
+```"
+acl-97c02dfe,acl-97c02dfe,CloudPlatform/Firewall,networkAcl,5.1 Ensure no Network ACLs allow ingress from 0.0.0.0/0 to remote server administration ports,FAIL,HIGH,Network ACL should restrict access over remote administration ports,2022-05-17T01:17:13Z,"Perform the following commands to delete or modify an inbound NACL rule to restrict remote administration ports access to specific entities via AWS CLI:   
+**1.** To view the current NACL configuration:   
+```  
+aws ec2 describe-network-acls --network-acl-ids {{naclId}}  
+```  
+**2.** To modify an inbound rule, use the rule number from the previous output in the following command, and insert the wanted port range and IP CIDR:  
+```  
+aws ec2 replace-network-acl-entry --network-acl-id   --protocol tcp --rule-action allow --rule-number <ruleNumber> --ingress --cidr-block <ipCidr> --port-range From=<port>,To=<port>  
+```   
+**3.** To delete an unrestricted rule (allowed ingress connection of SSH\ RDP with 0.0.0.0/0) use the rule number from the previous output in the following command:  
+  
+```  
+aws ec2 delete-network-acl-entry --network-acl-id {{naclId}} --ingress --rule-number <ruleNumber>  
+```"
+acl-27218841,acl-27218841,CloudPlatform/Firewall,networkAcl,5.1 Ensure no Network ACLs allow ingress from 0.0.0.0/0 to remote server administration ports,FAIL,HIGH,Network ACL should restrict access over remote administration ports,2022-05-17T10:30:21Z,"Perform the following commands to delete or modify an inbound NACL rule to restrict remote administration ports access to specific entities via AWS CLI:   
+**1.** To view the current NACL configuration:   
+```  
+aws ec2 describe-network-acls --network-acl-ids {{naclId}}  
+```  
+**2.** To modify an inbound rule, use the rule number from the previous output in the following command, and insert the wanted port range and IP CIDR:  
+```  
+aws ec2 replace-network-acl-entry --network-acl-id   --protocol tcp --rule-action allow --rule-number <ruleNumber> --ingress --cidr-block <ipCidr> --port-range From=<port>,To=<port>  
+```   
+**3.** To delete an unrestricted rule (allowed ingress connection of SSH\ RDP with 0.0.0.0/0) use the rule number from the previous output in the following command:  
+  
+```  
+aws ec2 delete-network-acl-entry --network-acl-id {{naclId}} --ingress --rule-number <ruleNumber>  
+```"
+acl-82d62ee9,acl-82d62ee9,CloudPlatform/Firewall,networkAcl,5.1 Ensure no Network ACLs allow ingress from 0.0.0.0/0 to remote server administration ports,FAIL,HIGH,Network ACL should restrict access over remote administration ports,2022-05-17T10:28:07Z,"Perform the following commands to delete or modify an inbound NACL rule to restrict remote administration ports access to specific entities via AWS CLI:   
+**1.** To view the current NACL configuration:   
+```  
+aws ec2 describe-network-acls --network-acl-ids {{naclId}}  
+```  
+**2.** To modify an inbound rule, use the rule number from the previous output in the following command, and insert the wanted port range and IP CIDR:  
+```  
+aws ec2 replace-network-acl-entry --network-acl-id   --protocol tcp --rule-action allow --rule-number <ruleNumber> --ingress --cidr-block <ipCidr> --port-range From=<port>,To=<port>  
+```   
+**3.** To delete an unrestricted rule (allowed ingress connection of SSH\ RDP with 0.0.0.0/0) use the rule number from the previous output in the following command:  
+  
+```  
+aws ec2 delete-network-acl-entry --network-acl-id {{naclId}} --ingress --rule-number <ruleNumber>  
+```"
+acl-3aa1fa52,acl-3aa1fa52,CloudPlatform/Firewall,networkAcl,5.1 Ensure no Network ACLs allow ingress from 0.0.0.0/0 to remote server administration ports,FAIL,HIGH,Network ACL should restrict access over remote administration ports,2022-05-17T10:30:20Z,"Perform the following commands to delete or modify an inbound NACL rule to restrict remote administration ports access to specific entities via AWS CLI:   
+**1.** To view the current NACL configuration:   
+```  
+aws ec2 describe-network-acls --network-acl-ids {{naclId}}  
+```  
+**2.** To modify an inbound rule, use the rule number from the previous output in the following command, and insert the wanted port range and IP CIDR:  
+```  
+aws ec2 replace-network-acl-entry --network-acl-id   --protocol tcp --rule-action allow --rule-number <ruleNumber> --ingress --cidr-block <ipCidr> --port-range From=<port>,To=<port>  
+```   
+**3.** To delete an unrestricted rule (allowed ingress connection of SSH\ RDP with 0.0.0.0/0) use the rule number from the previous output in the following command:  
+  
+```  
+aws ec2 delete-network-acl-entry --network-acl-id {{naclId}} --ingress --rule-number <ruleNumber>  
+```"
+acl-083a220ed36071e4b,acl-083a220ed36071e4b,CloudPlatform/Firewall,networkAcl,5.1 Ensure no Network ACLs allow ingress from 0.0.0.0/0 to remote server administration ports,FAIL,HIGH,Network ACL should restrict access over remote administration ports,2022-05-17T01:17:25Z,"Perform the following commands to delete or modify an inbound NACL rule to restrict remote administration ports access to specific entities via AWS CLI:   
+**1.** To view the current NACL configuration:   
+```  
+aws ec2 describe-network-acls --network-acl-ids {{naclId}}  
+```  
+**2.** To modify an inbound rule, use the rule number from the previous output in the following command, and insert the wanted port range and IP CIDR:  
+```  
+aws ec2 replace-network-acl-entry --network-acl-id   --protocol tcp --rule-action allow --rule-number <ruleNumber> --ingress --cidr-block <ipCidr> --port-range From=<port>,To=<port>  
+```   
+**3.** To delete an unrestricted rule (allowed ingress connection of SSH\ RDP with 0.0.0.0/0) use the rule number from the previous output in the following command:  
+  
+```  
+aws ec2 delete-network-acl-entry --network-acl-id {{naclId}} --ingress --rule-number <ruleNumber>  
+```"
+acl-28e9ff41,acl-28e9ff41,CloudPlatform/Firewall,networkAcl,5.1 Ensure no Network ACLs allow ingress from 0.0.0.0/0 to remote server administration ports,FAIL,HIGH,Network ACL should restrict access over remote administration ports,2022-05-17T10:30:21Z,"Perform the following commands to delete or modify an inbound NACL rule to restrict remote administration ports access to specific entities via AWS CLI:   
+**1.** To view the current NACL configuration:   
+```  
+aws ec2 describe-network-acls --network-acl-ids {{naclId}}  
+```  
+**2.** To modify an inbound rule, use the rule number from the previous output in the following command, and insert the wanted port range and IP CIDR:  
+```  
+aws ec2 replace-network-acl-entry --network-acl-id   --protocol tcp --rule-action allow --rule-number <ruleNumber> --ingress --cidr-block <ipCidr> --port-range From=<port>,To=<port>  
+```   
+**3.** To delete an unrestricted rule (allowed ingress connection of SSH\ RDP with 0.0.0.0/0) use the rule number from the previous output in the following command:  
+  
+```  
+aws ec2 delete-network-acl-entry --network-acl-id {{naclId}} --ingress --rule-number <ruleNumber>  
+```"
+acl-ec9a2387,acl-ec9a2387,CloudPlatform/Firewall,networkAcl,5.1 Ensure no Network ACLs allow ingress from 0.0.0.0/0 to remote server administration ports,FAIL,HIGH,Network ACL should restrict access over remote administration ports,2022-05-17T01:15:44Z,"Perform the following commands to delete or modify an inbound NACL rule to restrict remote administration ports access to specific entities via AWS CLI:   
+**1.** To view the current NACL configuration:   
+```  
+aws ec2 describe-network-acls --network-acl-ids {{naclId}}  
+```  
+**2.** To modify an inbound rule, use the rule number from the previous output in the following command, and insert the wanted port range and IP CIDR:  
+```  
+aws ec2 replace-network-acl-entry --network-acl-id   --protocol tcp --rule-action allow --rule-number <ruleNumber> --ingress --cidr-block <ipCidr> --port-range From=<port>,To=<port>  
+```   
+**3.** To delete an unrestricted rule (allowed ingress connection of SSH\ RDP with 0.0.0.0/0) use the rule number from the previous output in the following command:  
+  
+```  
+aws ec2 delete-network-acl-entry --network-acl-id {{naclId}} --ingress --rule-number <ruleNumber>  
+```"
+acl-3f0af95a,acl-3f0af95a,CloudPlatform/Firewall,networkAcl,5.1 Ensure no Network ACLs allow ingress from 0.0.0.0/0 to remote server administration ports,FAIL,HIGH,Network ACL should restrict access over remote administration ports,2022-05-17T01:17:13Z,"Perform the following commands to delete or modify an inbound NACL rule to restrict remote administration ports access to specific entities via AWS CLI:   
+**1.** To view the current NACL configuration:   
+```  
+aws ec2 describe-network-acls --network-acl-ids {{naclId}}  
+```  
+**2.** To modify an inbound rule, use the rule number from the previous output in the following command, and insert the wanted port range and IP CIDR:  
+```  
+aws ec2 replace-network-acl-entry --network-acl-id   --protocol tcp --rule-action allow --rule-number <ruleNumber> --ingress --cidr-block <ipCidr> --port-range From=<port>,To=<port>  
+```   
+**3.** To delete an unrestricted rule (allowed ingress connection of SSH\ RDP with 0.0.0.0/0) use the rule number from the previous output in the following command:  
+  
+```  
+aws ec2 delete-network-acl-entry --network-acl-id {{naclId}} --ingress --rule-number <ruleNumber>  
+```"
+acl-ec7df88a,acl-ec7df88a,CloudPlatform/Firewall,networkAcl,5.1 Ensure no Network ACLs allow ingress from 0.0.0.0/0 to remote server administration ports,FAIL,HIGH,Network ACL should restrict access over remote administration ports,2022-05-17T10:28:03Z,"Perform the following commands to delete or modify an inbound NACL rule to restrict remote administration ports access to specific entities via AWS CLI:   
+**1.** To view the current NACL configuration:   
+```  
+aws ec2 describe-network-acls --network-acl-ids {{naclId}}  
+```  
+**2.** To modify an inbound rule, use the rule number from the previous output in the following command, and insert the wanted port range and IP CIDR:  
+```  
+aws ec2 replace-network-acl-entry --network-acl-id   --protocol tcp --rule-action allow --rule-number <ruleNumber> --ingress --cidr-block <ipCidr> --port-range From=<port>,To=<port>  
+```   
+**3.** To delete an unrestricted rule (allowed ingress connection of SSH\ RDP with 0.0.0.0/0) use the rule number from the previous output in the following command:  
+  
+```  
+aws ec2 delete-network-acl-entry --network-acl-id {{naclId}} --ingress --rule-number <ruleNumber>  
+```"
+acl-0d5ea7057856e1720,acl-0d5ea7057856e1720,CloudPlatform/Firewall,networkAcl,5.1 Ensure no Network ACLs allow ingress from 0.0.0.0/0 to remote server administration ports,FAIL,HIGH,Network ACL should restrict access over remote administration ports,2022-05-17T10:31:14Z,"Perform the following commands to delete or modify an inbound NACL rule to restrict remote administration ports access to specific entities via AWS CLI:   
+**1.** To view the current NACL configuration:   
+```  
+aws ec2 describe-network-acls --network-acl-ids {{naclId}}  
+```  
+**2.** To modify an inbound rule, use the rule number from the previous output in the following command, and insert the wanted port range and IP CIDR:  
+```  
+aws ec2 replace-network-acl-entry --network-acl-id   --protocol tcp --rule-action allow --rule-number <ruleNumber> --ingress --cidr-block <ipCidr> --port-range From=<port>,To=<port>  
+```   
+**3.** To delete an unrestricted rule (allowed ingress connection of SSH\ RDP with 0.0.0.0/0) use the rule number from the previous output in the following command:  
+  
+```  
+aws ec2 delete-network-acl-entry --network-acl-id {{naclId}} --ingress --rule-number <ruleNumber>  
+```"
+acl-0fc3bcac1252736e7,acl-0fc3bcac1252736e7,CloudPlatform/Firewall,networkAcl,5.1 Ensure no Network ACLs allow ingress from 0.0.0.0/0 to remote server administration ports,FAIL,HIGH,Network ACL should restrict access over remote administration ports,2022-05-17T10:30:27Z,"Perform the following commands to delete or modify an inbound NACL rule to restrict remote administration ports access to specific entities via AWS CLI:   
+**1.** To view the current NACL configuration:   
+```  
+aws ec2 describe-network-acls --network-acl-ids {{naclId}}  
+```  
+**2.** To modify an inbound rule, use the rule number from the previous output in the following command, and insert the wanted port range and IP CIDR:  
+```  
+aws ec2 replace-network-acl-entry --network-acl-id   --protocol tcp --rule-action allow --rule-number <ruleNumber> --ingress --cidr-block <ipCidr> --port-range From=<port>,To=<port>  
+```   
+**3.** To delete an unrestricted rule (allowed ingress connection of SSH\ RDP with 0.0.0.0/0) use the rule number from the previous output in the following command:  
+  
+```  
+aws ec2 delete-network-acl-entry --network-acl-id {{naclId}} --ingress --rule-number <ruleNumber>  
+```"
+acl-0593666e,acl-0593666e,CloudPlatform/Firewall,networkAcl,5.1 Ensure no Network ACLs allow ingress from 0.0.0.0/0 to remote server administration ports,FAIL,HIGH,Network ACL should restrict access over remote administration ports,2022-05-17T10:30:24Z,"Perform the following commands to delete or modify an inbound NACL rule to restrict remote administration ports access to specific entities via AWS CLI:   
+**1.** To view the current NACL configuration:   
+```  
+aws ec2 describe-network-acls --network-acl-ids {{naclId}}  
+```  
+**2.** To modify an inbound rule, use the rule number from the previous output in the following command, and insert the wanted port range and IP CIDR:  
+```  
+aws ec2 replace-network-acl-entry --network-acl-id   --protocol tcp --rule-action allow --rule-number <ruleNumber> --ingress --cidr-block <ipCidr> --port-range From=<port>,To=<port>  
+```   
+**3.** To delete an unrestricted rule (allowed ingress connection of SSH\ RDP with 0.0.0.0/0) use the rule number from the previous output in the following command:  
+  
+```  
+aws ec2 delete-network-acl-entry --network-acl-id {{naclId}} --ingress --rule-number <ruleNumber>  
+```"
+acl-00c9776b,acl-00c9776b,CloudPlatform/Firewall,networkAcl,5.1 Ensure no Network ACLs allow ingress from 0.0.0.0/0 to remote server administration ports,FAIL,HIGH,Network ACL should restrict access over remote administration ports,2022-05-17T10:28:03Z,"Perform the following commands to delete or modify an inbound NACL rule to restrict remote administration ports access to specific entities via AWS CLI:   
+**1.** To view the current NACL configuration:   
+```  
+aws ec2 describe-network-acls --network-acl-ids {{naclId}}  
+```  
+**2.** To modify an inbound rule, use the rule number from the previous output in the following command, and insert the wanted port range and IP CIDR:  
+```  
+aws ec2 replace-network-acl-entry --network-acl-id   --protocol tcp --rule-action allow --rule-number <ruleNumber> --ingress --cidr-block <ipCidr> --port-range From=<port>,To=<port>  
+```   
+**3.** To delete an unrestricted rule (allowed ingress connection of SSH\ RDP with 0.0.0.0/0) use the rule number from the previous output in the following command:  
+  
+```  
+aws ec2 delete-network-acl-entry --network-acl-id {{naclId}} --ingress --rule-number <ruleNumber>  
+```"
+acl-003306440bb512c2d,acl-003306440bb512c2d,CloudPlatform/Firewall,networkAcl,5.1 Ensure no Network ACLs allow ingress from 0.0.0.0/0 to remote server administration ports,FAIL,HIGH,Network ACL should restrict access over remote administration ports,2022-05-17T01:17:25Z,"Perform the following commands to delete or modify an inbound NACL rule to restrict remote administration ports access to specific entities via AWS CLI:   
+**1.** To view the current NACL configuration:   
+```  
+aws ec2 describe-network-acls --network-acl-ids {{naclId}}  
+```  
+**2.** To modify an inbound rule, use the rule number from the previous output in the following command, and insert the wanted port range and IP CIDR:  
+```  
+aws ec2 replace-network-acl-entry --network-acl-id   --protocol tcp --rule-action allow --rule-number <ruleNumber> --ingress --cidr-block <ipCidr> --port-range From=<port>,To=<port>  
+```   
+**3.** To delete an unrestricted rule (allowed ingress connection of SSH\ RDP with 0.0.0.0/0) use the rule number from the previous output in the following command:  
+  
+```  
+aws ec2 delete-network-acl-entry --network-acl-id {{naclId}} --ingress --rule-number <ruleNumber>  
+```"
+acl-34de7b52,acl-34de7b52,CloudPlatform/Firewall,networkAcl,5.1 Ensure no Network ACLs allow ingress from 0.0.0.0/0 to remote server administration ports,FAIL,HIGH,Network ACL should restrict access over remote administration ports,2022-05-17T10:30:23Z,"Perform the following commands to delete or modify an inbound NACL rule to restrict remote administration ports access to specific entities via AWS CLI:   
+**1.** To view the current NACL configuration:   
+```  
+aws ec2 describe-network-acls --network-acl-ids {{naclId}}  
+```  
+**2.** To modify an inbound rule, use the rule number from the previous output in the following command, and insert the wanted port range and IP CIDR:  
+```  
+aws ec2 replace-network-acl-entry --network-acl-id   --protocol tcp --rule-action allow --rule-number <ruleNumber> --ingress --cidr-block <ipCidr> --port-range From=<port>,To=<port>  
+```   
+**3.** To delete an unrestricted rule (allowed ingress connection of SSH\ RDP with 0.0.0.0/0) use the rule number from the previous output in the following command:  
+  
+```  
+aws ec2 delete-network-acl-entry --network-acl-id {{naclId}} --ingress --rule-number <ruleNumber>  
+```"
+acl-6562140c,acl-6562140c,CloudPlatform/Firewall,networkAcl,5.1 Ensure no Network ACLs allow ingress from 0.0.0.0/0 to remote server administration ports,FAIL,HIGH,Network ACL should restrict access over remote administration ports,2022-05-17T10:30:22Z,"Perform the following commands to delete or modify an inbound NACL rule to restrict remote administration ports access to specific entities via AWS CLI:   
+**1.** To view the current NACL configuration:   
+```  
+aws ec2 describe-network-acls --network-acl-ids {{naclId}}  
+```  
+**2.** To modify an inbound rule, use the rule number from the previous output in the following command, and insert the wanted port range and IP CIDR:  
+```  
+aws ec2 replace-network-acl-entry --network-acl-id   --protocol tcp --rule-action allow --rule-number <ruleNumber> --ingress --cidr-block <ipCidr> --port-range From=<port>,To=<port>  
+```   
+**3.** To delete an unrestricted rule (allowed ingress connection of SSH\ RDP with 0.0.0.0/0) use the rule number from the previous output in the following command:  
+  
+```  
+aws ec2 delete-network-acl-entry --network-acl-id {{naclId}} --ingress --rule-number <ruleNumber>  
+```"
+acl-0d6176ec30d506894,acl-0d6176ec30d506894,CloudPlatform/Firewall,networkAcl,5.1 Ensure no Network ACLs allow ingress from 0.0.0.0/0 to remote server administration ports,FAIL,HIGH,Network ACL should restrict access over remote administration ports,2022-05-17T10:31:17Z,"Perform the following commands to delete or modify an inbound NACL rule to restrict remote administration ports access to specific entities via AWS CLI:   
+**1.** To view the current NACL configuration:   
+```  
+aws ec2 describe-network-acls --network-acl-ids {{naclId}}  
+```  
+**2.** To modify an inbound rule, use the rule number from the previous output in the following command, and insert the wanted port range and IP CIDR:  
+```  
+aws ec2 replace-network-acl-entry --network-acl-id   --protocol tcp --rule-action allow --rule-number <ruleNumber> --ingress --cidr-block <ipCidr> --port-range From=<port>,To=<port>  
+```   
+**3.** To delete an unrestricted rule (allowed ingress connection of SSH\ RDP with 0.0.0.0/0) use the rule number from the previous output in the following command:  
+  
+```  
+aws ec2 delete-network-acl-entry --network-acl-id {{naclId}} --ingress --rule-number <ruleNumber>  
+```"
+acl-ef338d89,acl-ef338d89,CloudPlatform/Firewall,networkAcl,5.1 Ensure no Network ACLs allow ingress from 0.0.0.0/0 to remote server administration ports,FAIL,HIGH,Network ACL should restrict access over remote administration ports,2022-05-17T01:15:47Z,"Perform the following commands to delete or modify an inbound NACL rule to restrict remote administration ports access to specific entities via AWS CLI:   
+**1.** To view the current NACL configuration:   
+```  
+aws ec2 describe-network-acls --network-acl-ids {{naclId}}  
+```  
+**2.** To modify an inbound rule, use the rule number from the previous output in the following command, and insert the wanted port range and IP CIDR:  
+```  
+aws ec2 replace-network-acl-entry --network-acl-id   --protocol tcp --rule-action allow --rule-number <ruleNumber> --ingress --cidr-block <ipCidr> --port-range From=<port>,To=<port>  
+```   
+**3.** To delete an unrestricted rule (allowed ingress connection of SSH\ RDP with 0.0.0.0/0) use the rule number from the previous output in the following command:  
+  
+```  
+aws ec2 delete-network-acl-entry --network-acl-id {{naclId}} --ingress --rule-number <ruleNumber>  
+```"
+acl-01b6ba1c722c7a962,acl-01b6ba1c722c7a962,CloudPlatform/Firewall,networkAcl,5.1 Ensure no Network ACLs allow ingress from 0.0.0.0/0 to remote server administration ports,FAIL,HIGH,Network ACL should restrict access over remote administration ports,2022-05-17T10:31:16Z,"Perform the following commands to delete or modify an inbound NACL rule to restrict remote administration ports access to specific entities via AWS CLI:   
+**1.** To view the current NACL configuration:   
+```  
+aws ec2 describe-network-acls --network-acl-ids {{naclId}}  
+```  
+**2.** To modify an inbound rule, use the rule number from the previous output in the following command, and insert the wanted port range and IP CIDR:  
+```  
+aws ec2 replace-network-acl-entry --network-acl-id   --protocol tcp --rule-action allow --rule-number <ruleNumber> --ingress --cidr-block <ipCidr> --port-range From=<port>,To=<port>  
+```   
+**3.** To delete an unrestricted rule (allowed ingress connection of SSH\ RDP with 0.0.0.0/0) use the rule number from the previous output in the following command:  
+  
+```  
+aws ec2 delete-network-acl-entry --network-acl-id {{naclId}} --ingress --rule-number <ruleNumber>  
+```"
+acl-640ba302,acl-640ba302,CloudPlatform/Firewall,networkAcl,5.1 Ensure no Network ACLs allow ingress from 0.0.0.0/0 to remote server administration ports,FAIL,HIGH,Network ACL should restrict access over remote administration ports,2022-05-17T10:30:23Z,"Perform the following commands to delete or modify an inbound NACL rule to restrict remote administration ports access to specific entities via AWS CLI:   
+**1.** To view the current NACL configuration:   
+```  
+aws ec2 describe-network-acls --network-acl-ids {{naclId}}  
+```  
+**2.** To modify an inbound rule, use the rule number from the previous output in the following command, and insert the wanted port range and IP CIDR:  
+```  
+aws ec2 replace-network-acl-entry --network-acl-id   --protocol tcp --rule-action allow --rule-number <ruleNumber> --ingress --cidr-block <ipCidr> --port-range From=<port>,To=<port>  
+```   
+**3.** To delete an unrestricted rule (allowed ingress connection of SSH\ RDP with 0.0.0.0/0) use the rule number from the previous output in the following command:  
+  
+```  
+aws ec2 delete-network-acl-entry --network-acl-id {{naclId}} --ingress --rule-number <ruleNumber>  
+```"
+acl-8ada72ec,acl-8ada72ec,CloudPlatform/Firewall,networkAcl,5.1 Ensure no Network ACLs allow ingress from 0.0.0.0/0 to remote server administration ports,FAIL,HIGH,Network ACL should restrict access over remote administration ports,2022-05-17T01:15:48Z,"Perform the following commands to delete or modify an inbound NACL rule to restrict remote administration ports access to specific entities via AWS CLI:   
+**1.** To view the current NACL configuration:   
+```  
+aws ec2 describe-network-acls --network-acl-ids {{naclId}}  
+```  
+**2.** To modify an inbound rule, use the rule number from the previous output in the following command, and insert the wanted port range and IP CIDR:  
+```  
+aws ec2 replace-network-acl-entry --network-acl-id   --protocol tcp --rule-action allow --rule-number <ruleNumber> --ingress --cidr-block <ipCidr> --port-range From=<port>,To=<port>  
+```   
+**3.** To delete an unrestricted rule (allowed ingress connection of SSH\ RDP with 0.0.0.0/0) use the rule number from the previous output in the following command:  
+  
+```  
+aws ec2 delete-network-acl-entry --network-acl-id {{naclId}} --ingress --rule-number <ruleNumber>  
+```"
+acl-45ae2a23,acl-45ae2a23,CloudPlatform/Firewall,networkAcl,5.1 Ensure no Network ACLs allow ingress from 0.0.0.0/0 to remote server administration ports,FAIL,HIGH,Network ACL should restrict access over remote administration ports,2022-05-17T01:15:45Z,"Perform the following commands to delete or modify an inbound NACL rule to restrict remote administration ports access to specific entities via AWS CLI:   
+**1.** To view the current NACL configuration:   
+```  
+aws ec2 describe-network-acls --network-acl-ids {{naclId}}  
+```  
+**2.** To modify an inbound rule, use the rule number from the previous output in the following command, and insert the wanted port range and IP CIDR:  
+```  
+aws ec2 replace-network-acl-entry --network-acl-id   --protocol tcp --rule-action allow --rule-number <ruleNumber> --ingress --cidr-block <ipCidr> --port-range From=<port>,To=<port>  
+```   
+**3.** To delete an unrestricted rule (allowed ingress connection of SSH\ RDP with 0.0.0.0/0) use the rule number from the previous output in the following command:  
+  
+```  
+aws ec2 delete-network-acl-entry --network-acl-id {{naclId}} --ingress --rule-number <ruleNumber>  
+```"
+acl-0ea4fc0d84b4f6908,acl-0ea4fc0d84b4f6908,CloudPlatform/Firewall,networkAcl,5.1 Ensure no Network ACLs allow ingress from 0.0.0.0/0 to remote server administration ports,FAIL,HIGH,Network ACL should restrict access over remote administration ports,2022-05-17T10:31:16Z,"Perform the following commands to delete or modify an inbound NACL rule to restrict remote administration ports access to specific entities via AWS CLI:   
+**1.** To view the current NACL configuration:   
+```  
+aws ec2 describe-network-acls --network-acl-ids {{naclId}}  
+```  
+**2.** To modify an inbound rule, use the rule number from the previous output in the following command, and insert the wanted port range and IP CIDR:  
+```  
+aws ec2 replace-network-acl-entry --network-acl-id   --protocol tcp --rule-action allow --rule-number <ruleNumber> --ingress --cidr-block <ipCidr> --port-range From=<port>,To=<port>  
+```   
+**3.** To delete an unrestricted rule (allowed ingress connection of SSH\ RDP with 0.0.0.0/0) use the rule number from the previous output in the following command:  
+  
+```  
+aws ec2 delete-network-acl-entry --network-acl-id {{naclId}} --ingress --rule-number <ruleNumber>  
+```"
+acl-09bc2323fa80257c9,acl-09bc2323fa80257c9,CloudPlatform/Firewall,networkAcl,5.1 Ensure no Network ACLs allow ingress from 0.0.0.0/0 to remote server administration ports,FAIL,HIGH,Network ACL should restrict access over remote administration ports,2022-05-17T01:19:50Z,"Perform the following commands to delete or modify an inbound NACL rule to restrict remote administration ports access to specific entities via AWS CLI:   
+**1.** To view the current NACL configuration:   
+```  
+aws ec2 describe-network-acls --network-acl-ids {{naclId}}  
+```  
+**2.** To modify an inbound rule, use the rule number from the previous output in the following command, and insert the wanted port range and IP CIDR:  
+```  
+aws ec2 replace-network-acl-entry --network-acl-id   --protocol tcp --rule-action allow --rule-number <ruleNumber> --ingress --cidr-block <ipCidr> --port-range From=<port>,To=<port>  
+```   
+**3.** To delete an unrestricted rule (allowed ingress connection of SSH\ RDP with 0.0.0.0/0) use the rule number from the previous output in the following command:  
+  
+```  
+aws ec2 delete-network-acl-entry --network-acl-id {{naclId}} --ingress --rule-number <ruleNumber>  
+```"
+acl-aeda1cc7,acl-aeda1cc7,CloudPlatform/Firewall,networkAcl,5.1 Ensure no Network ACLs allow ingress from 0.0.0.0/0 to remote server administration ports,FAIL,HIGH,Network ACL should restrict access over remote administration ports,2022-05-17T01:17:13Z,"Perform the following commands to delete or modify an inbound NACL rule to restrict remote administration ports access to specific entities via AWS CLI:   
+**1.** To view the current NACL configuration:   
+```  
+aws ec2 describe-network-acls --network-acl-ids {{naclId}}  
+```  
+**2.** To modify an inbound rule, use the rule number from the previous output in the following command, and insert the wanted port range and IP CIDR:  
+```  
+aws ec2 replace-network-acl-entry --network-acl-id   --protocol tcp --rule-action allow --rule-number <ruleNumber> --ingress --cidr-block <ipCidr> --port-range From=<port>,To=<port>  
+```   
+**3.** To delete an unrestricted rule (allowed ingress connection of SSH\ RDP with 0.0.0.0/0) use the rule number from the previous output in the following command:  
+  
+```  
+aws ec2 delete-network-acl-entry --network-acl-id {{naclId}} --ingress --rule-number <ruleNumber>  
+```"
+acl-d65979be,acl-d65979be,CloudPlatform/Firewall,networkAcl,5.1 Ensure no Network ACLs allow ingress from 0.0.0.0/0 to remote server administration ports,FAIL,HIGH,Network ACL should restrict access over remote administration ports,2022-05-17T01:15:45Z,"Perform the following commands to delete or modify an inbound NACL rule to restrict remote administration ports access to specific entities via AWS CLI:   
+**1.** To view the current NACL configuration:   
+```  
+aws ec2 describe-network-acls --network-acl-ids {{naclId}}  
+```  
+**2.** To modify an inbound rule, use the rule number from the previous output in the following command, and insert the wanted port range and IP CIDR:  
+```  
+aws ec2 replace-network-acl-entry --network-acl-id   --protocol tcp --rule-action allow --rule-number <ruleNumber> --ingress --cidr-block <ipCidr> --port-range From=<port>,To=<port>  
+```   
+**3.** To delete an unrestricted rule (allowed ingress connection of SSH\ RDP with 0.0.0.0/0) use the rule number from the previous output in the following command:  
+  
+```  
+aws ec2 delete-network-acl-entry --network-acl-id {{naclId}} --ingress --rule-number <ruleNumber>  
+```"
+acl-0bcf716d,acl-0bcf716d,CloudPlatform/Firewall,networkAcl,5.1 Ensure no Network ACLs allow ingress from 0.0.0.0/0 to remote server administration ports,FAIL,HIGH,Network ACL should restrict access over remote administration ports,2022-05-17T10:28:05Z,"Perform the following commands to delete or modify an inbound NACL rule to restrict remote administration ports access to specific entities via AWS CLI:   
+**1.** To view the current NACL configuration:   
+```  
+aws ec2 describe-network-acls --network-acl-ids {{naclId}}  
+```  
+**2.** To modify an inbound rule, use the rule number from the previous output in the following command, and insert the wanted port range and IP CIDR:  
+```  
+aws ec2 replace-network-acl-entry --network-acl-id   --protocol tcp --rule-action allow --rule-number <ruleNumber> --ingress --cidr-block <ipCidr> --port-range From=<port>,To=<port>  
+```   
+**3.** To delete an unrestricted rule (allowed ingress connection of SSH\ RDP with 0.0.0.0/0) use the rule number from the previous output in the following command:  
+  
+```  
+aws ec2 delete-network-acl-entry --network-acl-id {{naclId}} --ingress --rule-number <ruleNumber>  
+```"
+acl-4e5fed28,acl-4e5fed28,CloudPlatform/Firewall,networkAcl,5.1 Ensure no Network ACLs allow ingress from 0.0.0.0/0 to remote server administration ports,FAIL,HIGH,Network ACL should restrict access over remote administration ports,2022-05-17T10:30:23Z,"Perform the following commands to delete or modify an inbound NACL rule to restrict remote administration ports access to specific entities via AWS CLI:   
+**1.** To view the current NACL configuration:   
+```  
+aws ec2 describe-network-acls --network-acl-ids {{naclId}}  
+```  
+**2.** To modify an inbound rule, use the rule number from the previous output in the following command, and insert the wanted port range and IP CIDR:  
+```  
+aws ec2 replace-network-acl-entry --network-acl-id   --protocol tcp --rule-action allow --rule-number <ruleNumber> --ingress --cidr-block <ipCidr> --port-range From=<port>,To=<port>  
+```   
+**3.** To delete an unrestricted rule (allowed ingress connection of SSH\ RDP with 0.0.0.0/0) use the rule number from the previous output in the following command:  
+  
+```  
+aws ec2 delete-network-acl-entry --network-acl-id {{naclId}} --ingress --rule-number <ruleNumber>  
+```"
