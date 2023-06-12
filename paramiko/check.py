@@ -35,7 +35,7 @@ def ssh_client_handler(
 
         private_key = open(private_key_path)
         key = paramiko.RSAKey.from_private_key(private_key)
-    except (paramiko.ssh_exception.PasswordRequiredException) as e:
+    except paramiko.ssh_exception.PasswordRequiredException as e:
         print("[-] your key is encrypted.")
 
     ssh_client = paramiko.SSHClient()

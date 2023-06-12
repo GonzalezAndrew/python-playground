@@ -1,7 +1,8 @@
 import os
-from rich import print
-from rich import color
 import random
+
+from rich import color
+from rich import print
 
 colors = sorted((v, k) for k, v in color.ANSI_COLOR_NAMES.items())
 
