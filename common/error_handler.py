@@ -3,7 +3,6 @@ import logging
 import traceback
 from typing import Generator
 
-
 logger = logging.getLogger(__name__)
 
 
